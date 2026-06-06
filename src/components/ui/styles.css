@@ -1,0 +1,38 @@
+/* Global Styles for QuranTool UI Components */
+
+/* Animations */
+@keyframes softBlink {
+    0% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+        text-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.blink-animation {
+    animation: softBlink 2s infinite ease-in-out;
+}
+
+/* Utilities */
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Add any other UI specific global styles here */

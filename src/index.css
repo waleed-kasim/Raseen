@@ -1,0 +1,2990 @@
+/* ============================================
+   أداة تثبيت حفظ القرآن - CSS
+   Dark Theme + Islamic Decorations + Bootstrap
+   ============================================ */
+
+/* Google Fonts */
+@import '@fontsource/amiri-quran';
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cairo:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap');
+ 
+/* Local Fonts */
+@font-face {
+  font-family: 'Hafs';
+  src: url('/fonts/Hafs.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Animations */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes glow-green {
+  0% {
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(40, 167, 69, 0.7);
+  }
+
+  100% {
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.4);
+  }
+}
+
+.glow-effect {
+  animation: glow-green 2s infinite;
+  border-color: #28a745 !important;
+  color: #28a745 !important;
+  background-color: rgba(40, 167, 69, 0.1);
+}
+
+/* CSS Variables */
+:root {
+  /* Colors */
+  --bg-primary: #000000;
+  --bg-secondary: #12121a;
+  --bg-card: #1a1a2e;
+  --bg-card-hover: #242445;
+  --bg-input: #0d0d15;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-quran: #f1f5f9;
+
+  --accent-gold: #d4af37;
+  --accent-gold-dim: rgba(212, 175, 55, 0.2);
+  --accent-green: #2e8b57;
+  --accent-green-dim: rgba(46, 139, 87, 0.2);
+  --accent-teal: #20b2aa;
+  --accent-teal-dim: rgba(32, 178, 170, 0.2);
+  --accent-purple: #8b5cf6;
+
+  --success: #22c55e;
+  --success-dim: rgba(34, 197, 94, 0.2);
+  --error: #ef4444;
+  --error-dim: rgba(239, 68, 68, 0.2);
+  --warning: #f59e0b;
+
+  /* Borders */
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-gold: rgba(212, 175, 55, 0.3);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-glow-gold: 0 0 20px rgba(212, 175, 55, 0.3);
+  --shadow-glow-green: 0 0 20px rgba(46, 139, 87, 0.3);
+
+  /* Typography */
+  --font-ui: 'Tajawal', sans-serif;
+  --font-quran: 'Amiri Quran', serif;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+/* Targeted Text Shadow (was on * but hurts performance + Quran clarity) */
+.hero-title,
+.page-title,
+.text-gold,
+.section-label,
+.logo {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Reset & Base */
+html {
+  direction: rtl;
+  overflow-x: hidden;
+  width: 100vw;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Strictly disable browser native text selection globally for all elements */
+*, *::before, *::after {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+body {
+  font-family: var(--font-ui);
+  background: var(--bg-primary);
+  color: #e4e4e7;
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+  width: 100vw;
+  position: relative;
+  touch-action: pan-x pan-y;
+  /* Prevent double-tap to zoom and pinch-to-zoom if browser allows */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  /* Override Bootstrap dark text colors */
+  --bs-body-color: #e4e4e7;
+  --bs-secondary-color: #b0b0b8;
+  --bs-tertiary-color: #9ca3af;
+  --bs-emphasis-color: #ffffff;
+}
+
+/* Re-enable native selection ONLY in editable fields (inputs/textareas need it) */
+input,
+textarea,
+[contenteditable="true"],
+input *,
+textarea *,
+[contenteditable="true"] * {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+}
+
+
+/* Force text-muted to be readable on dark backgrounds */
+.text-muted {
+  color: #b0b0b8 !important;
+}
+
+.text-secondary {
+  color: #b0b0b8 !important;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Islamic Pattern Background */
+.bg-pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.12;
+  background-size: 200px;
+  background-position: center;
+  background-repeat: repeat;
+  transition: all 0.5s ease;
+  filter: invert(1) sepia(0.5) saturate(3) hue-rotate(15deg);
+}
+
+.bg-pattern.pattern-1 {
+  background-image: url('/patterns/p1');
+}
+
+/* Header */
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  text-shadow: var(--shadow-glow-gold);
+}
+
+@media (min-width: 768px) {
+  .logo {
+    font-size: 2.5rem;
+  }
+}
+
+.logo-icon {
+  font-size: 1.8rem;
+}
+
+@media (min-width: 768px) {
+  .logo-icon {
+    font-size: 2rem;
+  }
+}
+
+.tagline {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .tagline {
+    font-size: 1.1rem;
+  }
+}
+
+/* Text Colors */
+.text-gold {
+  color: var(--accent-gold) !important;
+}
+
+.text-quran {
+  color: var(--text-quran) !important;
+  font-family: var(--font-quran);
+}
+
+/* Menu Section */
+.menu-section {
+  background: var(--bg-secondary);
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+}
+
+.section-title {
+  font-size: 1.1rem;
+  color: var(--accent-gold);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+}
+
+/* Custom Button */
+.btn-custom {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+  padding: 0.75rem 1rem;
+}
+
+.btn-custom:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent-gold);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md), var(--shadow-glow-gold);
+}
+
+.btn-custom:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-custom:disabled:hover {
+  transform: none;
+  border-color: var(--border-color);
+  box-shadow: none;
+}
+
+/* STRICT LOCKED BUTTON STATE - No Animations */
+.locked-mode-btn {
+  opacity: 0.5 !important;
+  filter: grayscale(1) !important;
+  cursor: pointer !important;
+  /* Clickable for toast */
+  transform: none !important;
+  box-shadow: none !important;
+  transition: none !important;
+  background-color: var(--bg-card) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-muted) !important;
+}
+
+.locked-mode-btn:hover,
+.locked-mode-btn:active,
+.locked-mode-btn:focus,
+.locked-mode-btn:focus-visible {
+  transform: none !important;
+  box-shadow: none !important;
+  background-color: var(--bg-card) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-muted) !important;
+  opacity: 0.5 !important;
+  outline: none !important;
+}
+
+/* Gold Button */
+.btn-gold {
+  background: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: var(--bg-primary);
+  font-weight: 600;
+}
+
+.btn-gold:hover {
+  background: #c9a227;
+  border-color: #c9a227;
+  color: var(--bg-primary);
+  box-shadow: var(--shadow-glow-gold);
+}
+
+.btn-outline-gold {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+.btn-outline-gold:hover {
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+}
+
+/* ============================================
+   NEW MAIN MENU LAYOUT (v2)
+   ============================================ */
+.main-menu-v2 {
+  padding-bottom: 80px;
+  /* Space for bottom nav/safe area */
+}
+
+/* 1. Hero Section */
+.hero-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  /* Reduced from 2rem */
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    grid-template-columns: 2fr 1fr;
+    /* grid-template-rows: auto; Let content dictate height */
+  }
+
+
+}
+
+.hero-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(145deg, rgba(45, 45, 60, 0.9), rgba(30, 30, 45, 0.95));
+  /* Solid dark card, no muddy black */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 160px;
+}
+
+.hero-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-gold-dim);
+  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-card.primary {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.25), rgba(212, 175, 55, 0.05));
+  /* Gold to light Gold */
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.hero-card.blue {
+  background: linear-gradient(135deg, rgba(13, 202, 240, 0.25), rgba(13, 202, 240, 0.05));
+  /* Cyan to light Cyan */
+  border-color: rgba(13, 202, 240, 0.3);
+}
+
+.hero-card.secondary {
+  background: linear-gradient(135deg, rgba(80, 200, 120, 0.2), rgba(80, 200, 120, 0.05));
+  /* Green to light Green */
+  border-color: rgba(80, 200, 120, 0.2);
+}
+
+.hero-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.hero-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.hero-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* 2. Bento Grid for Tools */
+.bento-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.bento-grid>* {
+  flex: 1 1 calc(50% - 1rem);
+  min-width: calc(50% - 1rem);
+}
+
+@media (min-width: 768px) {
+  .bento-grid>* {
+    flex: 1 1 calc(33.33% - 1rem);
+    min-width: calc(33.33% - 1rem);
+  }
+}
+
+@media (min-width: 992px) {
+  .bento-grid>* {
+    flex: 1 1 calc(25% - 1rem);
+    min-width: calc(25% - 1rem);
+  }
+}
+
+.bento-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  transition: all 0.2s ease;
+  height: 100%;
+}
+
+.bento-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent-gold);
+  transform: translateY(-2px);
+}
+
+.bento-icon {
+  font-size: 1.75rem;
+  color: var(--text-secondary);
+  transition: color 0.2s;
+}
+
+.bento-card:hover .bento-icon {
+  color: var(--accent-gold);
+}
+
+.bento-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* 3. Section Headers */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  /* Reduced from 2rem */
+  padding-right: 0.5rem;
+}
+
+.section-line {
+  flex-grow: 1;
+  height: 1px;
+  background: linear-gradient(to left, var(--border-color), transparent);
+}
+
+.section-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  letter-spacing: 0.5px;
+}
+
+/* Mobile Horizontal Scroll (Refined) */
+.horizontal-scroll-snap {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  margin-right: -1rem;
+  /* Negative margin to bleed to edge */
+  padding-right: 1rem;
+  /* Padding to compensate */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE/Edge */
+}
+
+.horizontal-scroll-snap::-webkit-scrollbar {
+  display: none;
+}
+
+.snap-item {
+  flex: 0 0 160px;
+  /* Fixed width cards */
+  scroll-snap-align: center;
+}
+
+@media (min-width: 576px) {
+  .challenge-flex {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: visible;
+    scroll-snap-type: none;
+    margin-right: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  .challenge-flex .snap-item {
+    flex: 1 1 calc(50% - 1rem);
+    min-width: calc(50% - 1rem);
+    scroll-snap-align: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .challenge-flex .snap-item {
+    flex: 1 1 calc(33.33% - 1rem);
+    min-width: calc(33.33% - 1rem);
+  }
+}
+
+@media (min-width: 992px) {
+  .challenge-flex .snap-item {
+    flex: 1 1 calc(25% - 1rem);
+    min-width: calc(25% - 1rem);
+  }
+}
+
+/* Mobile Carousel (Under 400px)  this is not error dont change it ever*/
+@media (max-width: 400px) {
+  .mobile-carousel-container {
+    position: relative;
+    padding: 0 10px;
+    margin: 0 -10px;
+    /* Negative margin to let cards touch edges */
+  }
+
+  .challengeCard {
+    max-width: 50%;
+  }
+
+  .mobile-carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+  }
+
+  .mobile-carousel::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+  }
+
+  .mobile-carousel>* {
+    flex: 0 0 100%;
+    /* Full width */
+    scroll-snap-align: center;
+  }
+
+  /* Navigation Arrows */
+  .carousel-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--gold-primary);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    box-shadow: none;
+  }
+
+  .carousel-nav-prev {
+    left: 0;
+  }
+
+  .carousel-nav-next {
+    right: 0;
+  }
+
+  /* Hide standard grid classes effects inside carousel */
+  .mobile-carousel .col-6,
+  .mobile-carousel .col-md-4,
+  .mobile-carousel .col-lg-3 {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* (btn-gold:hover moved next to .btn-gold above) */
+
+/* Form Controls */
+.form-control,
+.form-select {
+  background: var(--bg-input);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.form-control:focus,
+.form-select:focus {
+  background: var(--bg-input);
+  border-color: var(--accent-gold);
+  color: var(--text-primary);
+  box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+}
+
+.form-label {
+  color: var(--text-secondary);
+}
+
+.form-text {
+  color: var(--text-muted);
+}
+
+/* Modal */
+.modal-content {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-gold);
+}
+
+.modal-header {
+  border-bottom-color: var(--border-gold);
+}
+
+.modal-footer {
+  border-top-color: var(--border-color);
+}
+
+/* Flashcard */
+.flashcard-container {
+  perspective: 1000px;
+}
+
+.flashcard {
+  position: relative;
+  width: 100%;
+  min-height: 250px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 768px) {
+  .flashcard {
+    min-height: 300px;
+  }
+}
+
+.flashcard.flipped {
+  transform: rotateY(180deg);
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.flashcard-front,
+.flashcard-back {
+  position: absolute;
+  width: 100%;
+  min-height: 250px;
+  backface-visibility: hidden;
+  background: var(--bg-card);
+  border: 2px solid var(--border-gold);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg), var(--shadow-glow-gold);
+}
+
+@media (min-width: 768px) {
+
+  .flashcard-front,
+  .flashcard-back {
+    min-height: 300px;
+    padding: 2rem;
+  }
+}
+
+.flashcard-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, var(--bg-card) 0%, #1e1e3f 100%);
+}
+
+/* Quran Text */
+.quran-text {
+  font-family: var(--font-quran);
+  font-size: 2rem;
+  line-height: 2.5;
+  color: var(--text-quran);
+  text-align: center;
+  direction: rtl;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-variant-ligatures: all !important;
+  font-feature-settings: "ccmp", "locl", "calt", "liga", "kern" !important;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+@media (min-width: 768px) {
+  .quran-text {
+    font-size: 2.4rem;
+    line-height: 2.8;
+  }
+}
+
+/* Quran Text (Compact - for game mode cards) */
+.quran-text-sm {
+  font-family: var(--font-quran);
+  font-size: 1.2rem;
+  line-height: 2;
+  color: var(--text-quran);
+  text-align: center;
+  direction: rtl;
+}
+
+@media (min-width: 768px) {
+  .quran-text-sm {
+    font-size: 1.35rem;
+    line-height: 2.2;
+  }
+}
+
+/* Info Badge */
+.info-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.info-badge.gold {
+  background: var(--accent-gold-dim);
+  color: var(--accent-gold);
+  border: 1px solid var(--accent-gold);
+}
+
+.info-badge.green {
+  background: var(--accent-green-dim);
+  color: var(--accent-green);
+  border: 1px solid var(--accent-green);
+}
+
+.info-badge.teal {
+  background: var(--accent-teal-dim);
+  color: var(--accent-teal);
+  border: 1px solid var(--accent-teal);
+}
+
+/* Answer Options */
+.answer-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .answer-options {
+    gap: 1rem;
+  }
+}
+
+.option-btn {
+  padding: 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  color: var(--text-primary);
+  font-family: var(--font-quran);
+  font-size: 1rem;
+  line-height: 1.8;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .option-btn {
+    padding: 1.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+.option-btn:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent-gold);
+}
+
+.option-btn.selected {
+  border-color: var(--accent-teal);
+  background: var(--accent-teal-dim);
+}
+
+.option-btn.correct {
+  border-color: var(--success);
+  background: var(--success-dim);
+}
+
+/* Utility to hide scrollbar */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Answer Input */
+.answer-input {
+  width: 100%;
+  padding: 1rem;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  text-align: center;
+  transition: border-color var(--transition-fast);
+}
+
+.answer-input:focus {
+  outline: none;
+  border-color: var(--accent-gold);
+}
+
+.answer-input.correct {
+  border-color: var(--success);
+  background: var(--success-dim);
+}
+
+.answer-input.wrong {
+  border-color: var(--error);
+  background: var(--error-dim);
+}
+
+/* Pages List */
+.surah-group {
+  background: var(--bg-secondary);
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  margin-bottom: 1rem;
+}
+
+.surah-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: var(--bg-card);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.surah-header:hover {
+  background: var(--bg-card-hover);
+}
+
+.surah-name {
+  font-size: 1.1rem;
+  color: var(--accent-gold);
+}
+
+.surah-count {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.surah-pages {
+  padding: 1rem;
+  display: none;
+}
+
+.surah-pages.open {
+  display: block;
+}
+
+.page-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: var(--bg-input);
+  border-radius: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-item:last-child {
+  margin-bottom: 0;
+}
+
+.page-item-title {
+  color: var(--text-primary);
+}
+
+.page-item-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Icon Buttons */
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.icon-btn:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+
+.icon-btn.edit:hover {
+  border-color: var(--accent-teal);
+  color: var(--accent-teal);
+}
+
+.icon-btn.delete:hover {
+  border-color: var(--error);
+  color: var(--error);
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-muted);
+}
+
+.empty-state-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+/* Toast */
+.toast {
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.toast.success {
+  border-left: 4px solid var(--success);
+}
+
+.toast.error {
+  border-left: 4px solid var(--error);
+}
+
+.toast.info {
+  border-left: 4px solid var(--accent-teal);
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes satAppear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease;
+}
+
+.slide-up {
+  animation: slideUp 0.4s ease;
+}
+
+.pop-in {
+  animation: popIn 0.3s ease;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-gold);
+}
+
+/* ============================================
+   Annotation Highlights & Selection
+   ============================================ */
+.word-difficulty-medium {
+  color: #fbbf24 !important;
+  /* Amber/Orange */
+  font-weight: bold;
+}
+
+.word-difficulty-high {
+  color: #ef4444 !important;
+  /* Red */
+  font-weight: bold;
+}
+
+.word-has-note {
+  color: #3b82f6 !important;
+  /* Blue */
+  font-weight: bold;
+}
+
+.word-has-reflection {
+  color: #8b5cf6 !important;
+  /* Purple */
+  font-weight: bold;
+}
+
+.word-selected {
+  background-color: rgba(212, 175, 55, 0.4) !important;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.6);
+}
+
+.gold-range::-webkit-slider-runnable-track {
+  height: 6px;
+}
+
+.gold-range {
+  scale: -1 !important;
+  /* dont change this value */
+}
+
+
+/* ============================================
+   Game Mode Grids (Large Screen Fixes)
+   ============================================ */
+
+/* Default responsive behavior (mobile/tablet) */
+.prev-next-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.page-recognition-grid {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+/* Large screens (>1200px) - Fixed Grids */
+@media (min-width: 1200px) {
+  .prev-next-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    /* 3x2 Grid for 6 items */
+  }
+
+  .page-recognition-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    /* 2x2 Grid for 4 items */
+  }
+}
+
+/* Smart Review: Comfortably wide layout matching Regular Review */
+@media (min-width: 768px) {
+  .smart-review-card-width {
+    width: 92% !important;
+    max-width: 850px !important;
+    margin: 0 auto;
+  }
+}
+
+.page {
+  justify-content: center;
+}
+
+.annotation-menu {
+  z-index: 10001 !important;
+  /*dont change this value*/
+}
+
+/* Scroll Hint Animation */
+@keyframes slide-left-hint {
+
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: translateX(-5px);
+    opacity: 1;
+  }
+}
+
+.scroll-hint-anim {
+  animation: slide-left-hint 1.5s ease-in-out infinite;
+  display: inline-block;
+  color: var(--accent-gold);
+}
+
+.cheerup {
+  position: relative;
+  top: 10px;
+}
+
+/* Mobile Scroll Indicator (Slider) */
+.scroll-indicator-track {
+  width: 60px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin: 0.5rem auto 0;
+  position: relative;
+  overflow: hidden;
+  scale: -1 !important;
+}
+
+@media (min-width: 576px) {
+  .scroll-indicator-track {
+    display: none;
+    /* dont change this value */
+  }
+}
+
+.scroll-indicator-thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 35%;
+  background: var(--accent-gold);
+  border-radius: 10px;
+  transition: right 0.15s ease-out;
+}
+
+/* ============================================
+   Unified Page Header
+   ============================================ */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+.page-header .page-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin: 0;
+}
+
+/* ============================================
+   Unified Card Styles
+   ============================================ */
+.card-dark {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+}
+
+.card-dark-gold {
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 1rem;
+}
+
+/* ============================================
+   Verse Symbol (Ayah Number Circle)
+   ============================================ */
+/* ============================================
+   Verse Symbol (Ayah Separator)
+   ============================================ */
+.ayah-separator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-quran);
+  color: var(--accent-gold);
+  margin: 0 4px;
+  font-size: 1em;
+  vertical-align: middle;
+  line-height: 1;
+  position: relative;
+
+  /* Raise slightly as requested */
+}
+
+@media (min-width: 768px) {
+  .ayah-separator {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 990px) {
+
+  /* Specific refinement for Masked Review on large screens as requested */
+  .masked-review-container .ayah-separator {
+    font-size: 0.93em;
+    /* ~7% smaller */
+    top: -10px;
+    /* Raised 2px more (total -10px) */
+  }
+}
+
+/* ============================================
+   Blur / Mask Text (ThemesList memorization)
+   ============================================ */
+.blur-text-heavy {
+  user-select: none;
+  transition: filter 0.4s ease, opacity 0.4s ease;
+}
+
+.blur-text-heavy:hover {
+  opacity: 0.8;
+}
+
+/* ============================================
+   Shadow Gold (TutorialOverlay CTA)
+   ============================================ */
+.shadow-gold {
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.shadow-glow-gold {
+  box-shadow: var(--shadow-glow-gold);
+}
+
+/* ============================================
+   Pages Grid (from PagesGrid.jsx)
+   ============================================ */
+:root {
+  --page-grid-size: 55px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --page-grid-size: 70px;
+  }
+}
+
+.page-square:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.page-square:active {
+  transform: scale(0.95);
+}
+
+.shine-effect {
+  pointer-events: none;
+}
+
+/* PC Font Size Polish */
+@media (min-width: 992px) {
+
+  .quran-text,
+  .quran-word,
+  .aya-text {
+    font-size: 2.2rem !important;
+    line-height: 2.6 !important;
+  }
+}
+
+/* ============================================
+   Mobile Polish (Small Screens ≤ 480px)
+   ============================================ */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.15rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .hero-card {
+    padding: 1rem;
+    min-height: 120px;
+  }
+
+  .bento-card {
+    padding: 1rem;
+  }
+
+  .bento-icon {
+    font-size: 1.5rem;
+  }
+
+  .bento-title {
+    font-size: 0.85rem;
+  }
+
+  .quran-text {
+    font-size: 1.5rem;
+    line-height: 2.2;
+  }
+
+  .option-btn {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .page-header .page-title {
+    font-size: 1.1rem;
+  }
+
+  .settings-page .btn {
+    font-size: 0.9rem;
+  }
+}
+
+.horizontal-carousel {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ============================================
+   Rating & Review Animations (Optimized)
+   ============================================ */
+.fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.srs-btn-optimized {
+  transition: transform 0.15s ease, opacity 0.15s ease, background-color 0.15s ease;
+  will-change: transform, opacity;
+  border-width: 1px;
+}
+
+.srs-btn-optimized.selected {
+  transform: scale(1.08);
+  background-color: var(--bs-btn-hover-bg);
+  color: var(--bs-btn-hover-color) !important;
+  border-width: 2px;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.srs-btn-optimized.dimmed {
+  opacity: 0.4;
+  transform: scale(0.92);
+}
+
+@media (max-width: 576px) {
+  .srs-btn-optimized.selected {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.masked-word-item {
+  display: inline-block;
+  user-select: text;
+}
+
+.visible-word {
+  cursor: text;
+  transition: background-color 0.2s;
+  border-radius: 4px;
+  padding: 0 2px;
+}
+
+.word-selected {
+  background-color: rgba(212, 175, 55, 0.4) !important;
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.6);
+}
+
+.masked-word {
+  display: inline-block;
+  color: transparent !important;
+  background-color: #333;
+  border-radius: 4px;
+  vertical-align: middle;
+  transition: background-color 0.15s;
+  border: 1px solid #444;
+  cursor: pointer;
+  user-select: none;
+  padding: 0 2px;
+  height: 1.2rem !important;
+  line-height: 1.2rem !important;
+  overflow: hidden;
+}
+
+.masked-word.fixed-width {
+  width: 3.5rem !important;
+  padding: 0 !important;
+}
+
+.masked-word:hover {
+  background-color: #444;
+  border-color: #666;
+}
+
+/* ============================================
+   Composite Pages — Shared pages between surahs
+   ============================================ */
+
+/* Unmemorized chunk: heavy blur to prevent reading */
+.unmemorized-chunk-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+}
+
+.unmemorized-chunk-content {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.5;
+  direction: rtl;
+  text-align: center;
+  font-family: var(--font-quran);
+  line-height: 2.2;
+  font-size: 1.3rem;
+  padding: 1rem 0.75rem;
+  color: var(--text-quran);
+}
+
+.unmemorized-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+  z-index: 2;
+  text-align: center;
+  font-family: var(--font-ui);
+  pointer-events: none;
+}
+
+.unmemorized-overlay i {
+  font-size: 1.5rem;
+  opacity: 0.7;
+}
+
+/* Surah divider between chunks on a shared page */
+.surah-divider-line {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1rem 0;
+  direction: rtl;
+}
+
+.surah-divider-line::before,
+.surah-divider-line::after {
+  content: '';
+  flex: 1;
+  height: 14px;
+  border-top: 1px solid var(--accent-gold);
+  border-bottom: 1px solid var(--accent-gold);
+  mask-image: linear-gradient(to var(--dir, left), black, transparent);
+  -webkit-mask-image: linear-gradient(to var(--dir, left), black, transparent);
+}
+
+.surah-divider-line::before {
+  --dir: right;
+}
+
+.surah-divider-line::after {
+  --dir: left;
+}
+
+.surah-divider-label {
+  color: var(--accent-gold);
+  font-family: var(--font-quran);
+  font-size: 2.5rem;
+  white-space: nowrap;
+  padding: 0 1.5rem;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  line-height: 1.2;
+  transform: translateY(-7px);
+}
+
+/* Shared page indicator on pages grid */
+.composite-page-badge {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+  opacity: 0.8;
+  z-index: 3;
+}
+
+/* Memorized chunk wrapper (normal display) */
+.memorized-chunk-wrapper {
+  margin: 0.25rem 0;
+}
+
+/* ==========================================================================
+   MUTASHABIHAT TRAINER STYLES (Sleek Dark & Gold Theme)
+   ========================================================================== */
+
+/* Page Containers */
+.mut-page-desktop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(ellipse at center, #1a1a2e 0%, #0a0a12 60%, #000 100%);
+  z-index: 1000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.mut-page-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at center, #1a1a2e, #000);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
+  direction: rtl;
+}
+
+/* SVG overlay lines */
+.mut-svg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Desktop Topbar */
+.mut-desk-topbar {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 30;
+  box-sizing: border-box;
+  direction: rtl;
+}
+
+.mut-browse-btn-desk {
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
+  background: rgba(12, 12, 25, 0.8);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 24px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: all var(--transition-fast) ease;
+}
+
+.mut-browse-btn-desk:hover {
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
+}
+
+.mut-cci-badge-desk {
+  font-size: 0.8rem;
+  padding: 4px 14px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  font-weight: 600;
+}
+
+/* Orbit Grid for Desktop Layout */
+.mut-orbit-grid {
+  position: relative;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 1fr auto 1fr;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 60px;
+  padding-bottom: 120px;
+  direction: ltr; /* Force LTR coordinates for absolute positioning symmetry */
+}
+
+/* Satellites */
+.mut-satellite {
+  width: clamp(120px, 13vw, 175px);
+  height: clamp(120px, 13vw, 175px);
+  border-radius: 50%;
+  background: rgba(12, 12, 25, 0.95);
+  border: 2px solid var(--sat-clr, var(--accent-gold));
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6), 0 0 12px var(--sat-clr, var(--accent-gold))50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px;
+  user-select: none;
+  touch-action: none;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.1s ease;
+}
+
+.mut-satellite:hover {
+  box-shadow: 0 0 30px var(--sat-clr, var(--accent-gold))80, 0 8px 30px rgba(0, 0, 0, 0.7);
+}
+
+.mut-sat-ico {
+  color: var(--sat-clr);
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  margin-bottom: 4px;
+}
+
+.mut-sat-lbl {
+  color: var(--text-muted);
+  opacity: 0.7;
+  font-size: clamp(0.55rem, 0.9vw, 0.7rem);
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+
+.mut-sat-val {
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: clamp(0.6rem, 0.8vw, 0.75rem);
+  line-height: 1.3;
+  direction: rtl;
+  white-space: pre-line;
+}
+
+/* Central Hub (col 2, row 2) */
+.mut-hub-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  direction: rtl; /* Restore RTL for Arabic layout of card and sub-nav arrows */
+}
+
+.mut-hub-card {
+  background: rgba(12, 12, 25, 0.97);
+  border: 2px solid var(--border-gold);
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.1), 0 8px 32px rgba(0, 0, 0, 0.5);
+  width: clamp(300px, 45vw, 680px);
+  height: 52vh;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  direction: rtl;
+}
+
+.mut-hub-hdr {
+  padding: 10px 16px;
+  background: rgba(212, 175, 55, 0.05);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mut-hub-loc {
+  display: flex;
+  align-items: center;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.mut-sep {
+  margin: 0 8px;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.mut-hub-body {
+  flex: 1;
+  padding: 0;
+  overflow: hidden;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mut-hub-body .carousel-slide {
+  padding: 1rem 1.5rem;
+}
+
+.mut-hub-slide {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mut-hub-footer {
+  padding: 10px 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  max-height: 30%;
+  overflow-y: auto;
+}
+
+.mut-hub-pill {
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast) ease;
+}
+
+.mut-hub-pill:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+.mut-hub-pill.active {
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+  border-color: var(--accent-gold);
+  font-weight: bold;
+}
+
+.mut-sub-arrow {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-gold);
+  color: var(--accent-gold);
+  background: rgba(12, 12, 25, 0.9);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast) ease;
+  z-index: 30;
+}
+
+.mut-sub-arrow:hover:not(:disabled) {
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+}
+
+.mut-sub-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  border-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.15);
+  box-shadow: none;
+}
+
+/* Desktop Bottom Navigation */
+.mut-desk-btmbar {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(90vw, 550px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 30;
+  direction: rtl; /* Keep RTL for bottom navigation flow */
+}
+
+.mut-group-btn {
+  font-size: 0.85rem;
+  padding: 8px 24px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all var(--transition-fast) ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.mut-group-btn.primary {
+  background: var(--accent-gold);
+  border: 1px solid var(--accent-gold);
+  color: var(--bg-primary);
+}
+
+.mut-group-btn.primary:hover:not(:disabled) {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  filter: brightness(1.1);
+}
+
+.mut-group-btn.secondary {
+  background: rgba(12, 12, 25, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-primary);
+}
+
+.mut-group-btn.secondary:hover:not(:disabled) {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+.mut-group-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.mut-group-counter {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* ==========================
+   Mobile Layout Styling
+   ========================== */
+.mut-mob-hdr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(10, 10, 18, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 30;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mut-mob-hdr-mid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mut-mob-phrase-short {
+  font-family: var(--font-quran);
+  color: var(--accent-gold);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mut-mob-prog {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.mut-browse-btn {
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--accent-gold);
+  background: transparent;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.mut-mob-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mut-quran-card {
+  background: #1a1a2e;
+  border: 1.5px solid var(--border-gold);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+}
+
+.mut-quran-card-hdr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background: rgba(212, 175, 55, 0.05);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.mut-surah-tag {
+  color: var(--accent-gold);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.mut-ayah-tag {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.mut-quran-card-body {
+  padding: 0;
+  min-height: 120px;
+  max-height: 42vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.mut-quran-card-body .carousel-slide {
+  padding: 16px;
+}
+
+.mut-mob-slide {
+  width: 100%;
+  direction: rtl;
+}
+
+/* Item Navigation (Mobile occurrence dots) */
+.mut-item-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 4px 0;
+}
+
+.mut-nav-arrow-btn {
+  background: none;
+  border: none;
+  color: var(--accent-gold);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+}
+
+.mut-nav-arrow-btn:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.mut-dots-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.mut-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all var(--transition-fast) ease;
+}
+
+.mut-dot.active {
+  background: var(--accent-gold);
+  transform: scale(1.3);
+  box-shadow: 0 0 8px var(--accent-gold);
+}
+
+/* Info Grid (Mobile 2x2 Layout) */
+.mut-info-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 10px !important;
+  width: 100% !important;
+}
+
+.mut-info-card {
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-right: 3px solid var(--sat-clr, var(--accent-gold));
+  border-radius: 8px;
+  padding: 10px 12px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.mut-info-ico {
+  color: var(--sat-clr);
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+.mut-info-lbl {
+  color: var(--text-muted);
+  opacity: 0.65;
+  font-size: 0.65rem;
+  margin-bottom: 2px;
+}
+
+.mut-info-val {
+  color: var(--text-primary);
+  font-size: 0.72rem;
+  font-weight: bold;
+  line-height: 1.35;
+  white-space: pre-line;
+}
+
+.mut-phrase-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed rgba(212, 175, 55, 0.25);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.mut-phrase-txt {
+  font-family: var(--font-quran);
+  color: var(--accent-gold);
+  font-weight: bold;
+}
+
+/* Mobile Fixed Footer */
+.mut-mob-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: rgba(10, 10, 18, 0.9);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: calc(12px + env(safe-area-inset-bottom));
+}
+
+.mut-foot-btn {
+  font-size: 0.75rem;
+  padding: 6px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all var(--transition-fast) ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.mut-foot-btn.primary {
+  background: var(--accent-gold);
+  border: 1px solid var(--accent-gold);
+  color: var(--bg-primary);
+}
+
+.mut-foot-btn.secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.mut-foot-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.mut-foot-counter {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+/* ==========================
+   Two-level Group Selection Modal
+   ========================== */
+.mut-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(10px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.mut-modal {
+  background: #121218;
+  border: 1.5px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 0 50px rgba(212, 175, 55, 0.12), 0 20px 60px rgba(0, 0, 0, 0.7);
+  max-width: 780px;
+  width: 100%;
+  max-height: 88vh;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  direction: rtl;
+  box-sizing: border-box;
+}
+
+.mut-modal-hdr {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.mut-modal-back-btn {
+  background: none;
+  border: none;
+  color: var(--accent-gold);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.mut-modal-title {
+  color: var(--accent-gold);
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mut-modal-surah-name {
+  color: var(--accent-gold);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.mut-modal-cnt {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.78rem;
+  margin-right: 6px;
+}
+
+.mut-modal-close-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1.3rem;
+  cursor: pointer;
+  line-height: 1;
+  margin-right: auto;
+  padding: 0 4px;
+}
+
+.mut-modal-search-row {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  position: relative;
+}
+
+.mut-search-ico {
+  position: absolute;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--accent-gold);
+  font-size: 0.85rem;
+  pointer-events: none;
+}
+
+.mut-search-inp {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 22px;
+  padding: 8px 14px;
+  padding-right: 36px;
+  color: white;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  outline: none;
+  text-align: right;
+  direction: rtl;
+}
+
+.mut-search-inp:focus {
+  border-color: var(--accent-gold);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.mut-search-clr {
+  position: absolute;
+  left: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.mut-modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Surah Selection Grid */
+.mut-surah-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+@media (max-width: 767px) {
+  .mut-surah-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+  .mut-surah-card {
+    width: auto !important;
+    max-width: none !important;
+    display: flex !important;
+  }
+}
+
+.mut-surah-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 14px 16px;
+  cursor: pointer;
+  text-align: right;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: inherit;
+  transition: all var(--transition-fast) ease;
+}
+
+.mut-surah-card:hover {
+  border-color: var(--accent-gold);
+  background-color: rgba(212, 175, 55, 0.06);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.mut-surah-card.active {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: rgba(212, 175, 55, 0.7);
+}
+
+.mut-surah-cnt-badge {
+  font-size: 0.65rem;
+  color: rgba(212, 175, 55, 0.85);
+  background: rgba(212, 175, 55, 0.08);
+  padding: 2px 8px;
+  border-radius: 20px;
+  align-self: flex-start;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.mut-surah-name-txt {
+  font-family: var(--font-quran);
+  font-size: 1.1rem;
+  color: white;
+  line-height: 1.3;
+}
+
+/* Topics list inside selected surah */
+.mut-topics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mut-topic-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 14px 16px;
+  cursor: pointer;
+  direction: rtl;
+  transition: all var(--transition-fast) ease;
+}
+
+.mut-topic-card:hover {
+  border-color: var(--accent-gold);
+  background-color: rgba(212, 175, 55, 0.06);
+  transform: translateY(-2px);
+}
+
+.mut-topic-card.active {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: rgba(212, 175, 55, 0.7);
+}
+
+.mut-topic-hdr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.mut-cci-tag {
+  font-size: 0.68rem;
+  padding: 2px 10px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.mut-topic-places {
+  font-size: 0.68rem;
+  color: rgba(212, 175, 55, 0.7);
+  background: rgba(212, 175, 55, 0.08);
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.mut-topic-phrase {
+  font-family: var(--font-quran);
+  font-size: 1.05rem;
+  color: white;
+  line-height: 1.5;
+  margin: 0 0 6px;
+}
+
+.mut-topic-locs {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0;
+  direction: rtl;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ============================================
+   QuranText Styles for Mutashabihat
+   ============================================ */
+.mut-quran-text {
+  font-family: var(--font-quran);
+  line-height: 2.3;
+  direction: rtl;
+  text-align: center;
+  color: var(--text-quran);
+  margin: 0;
+}
+
+.mut-ctx {
+  opacity: 0.25;
+  transition: opacity 0.3s ease;
+}
+
+.mut-ctx:hover {
+  opacity: 0.5;
+}
+
+.mut-word-shared {
+  color: #ef4444;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(239, 68, 68, 0.15);
+}
+
+/* ============================================
+   Rotate Device Overlay for Mobile Landscape
+   ============================================ */
+.rotate-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #12121a;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--text-primary);
+  padding: 2rem;
+  direction: rtl;
+}
+
+.rotate-overlay-icon {
+  font-size: 5rem;
+  color: var(--accent-gold);
+  animation: rotateDevice 2.5s infinite ease-in-out;
+  margin-bottom: 1.5rem;
+}
+
+@keyframes rotateDevice {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(-90deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* ============================================
+   Two-Page Grid Layout — strict 100dvh budget
+   ============================================ */
+
+.twopage-grid-layout {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  height: 100dvh;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.twopage-header {
+  padding-top: 0.5rem;
+  padding-bottom: 0.25rem;
+}
+
+.twopage-engine-area {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 0; /* critical for grid children to shrink */
+  height: 100%; /* force height to fill grid cell */
+}
+
+/* Force carousel slides to NOT scroll vertically in book mode —
+   this prevents the book-spread from expanding taller than the viewport
+   and causing pages to stack on top of each other. */
+.twopage-engine-area .carousel-slide {
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+}
+
+/* The horizontal carousel container should also lock height */
+.twopage-engine-area .horizontal-carousel {
+  overflow: hidden !important;
+}
+
+/* ============================================
+   Book-Spread Layout — pages joined like a book
+   ============================================ */
+
+.book-spread {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  direction: rtl;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 0.75rem;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hide scrollbars within book-spread and its descendants while keeping scroll functionality */
+.book-spread,
+.book-spread * {
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important;  /* IE and Edge */
+}
+
+.book-spread::-webkit-scrollbar,
+.book-spread *::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari, Opera */
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.book-page {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 560px;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* Book spine — the central shadow + separator between pages */
+.book-spine {
+  width: 0px; /*dont change this*/ 
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.12) 25%,
+    rgba(0, 0, 0, 0.02) 45%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.02) 55%,
+    rgba(0, 0, 0, 0.12) 75%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+}
+
+/* Subtle center line within spine */
+.book-spine::after {
+  content: '';
+  position: absolute;
+  top: 4%;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(212, 175, 55, 0.15) 15%,
+    rgba(212, 175, 55, 0.25) 50%,
+    rgba(212, 175, 55, 0.15) 85%,
+    transparent 100%
+  );
+}
+
+/* Page cards in book mode — no individual borders, shared book container */
+.two-page-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 0 !important;
+  overflow: hidden;
+  background-color: var(--bg-card, #1e1e1e) !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition: all 0.3s ease;
+}
+
+/* Outer rounding on the book edges only */
+.book-page-right .two-page-card {
+  border-radius: 0 10px 10px 0 !important;
+}
+.book-page-left .two-page-card {
+  border-radius: 10px 0 0 10px !important;
+}
+
+/* Unified book border on the whole spread */
+.book-spread::before {
+  content: '';
+  position: absolute;
+  top: 0.5rem;
+  bottom: 0;
+  left: 0.75rem;
+  right: 0.75rem;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 10px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Inner shadow on each page edge near the spine for depth */
+.book-page-right .two-page-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.15), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+.book-page-left .two-page-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(to left, rgba(0,0,0,0.15), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Make card position relative for the ::after pseudo element */
+.book-page .two-page-card {
+  position: relative;
+}
+
+.two-page-card .card-header,
+.two-page-card .card-footer {
+  flex-shrink: 0;
+  background: transparent !important;
+  border-color: rgba(212, 175, 55, 0.15) !important;
+}
+
+.two-page-card .card-body {
+  flex: 1 1 auto;
+  overflow-y: auto !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 0;
+  padding: 0.75rem 1rem !important;
+}
+
+/* Fluid dynamic font scaling using viewport-height-dominant clamp */
+.two-page-card .quran-text {
+  font-size: clamp(1.05rem, 2.2vh + 0.4vw, 1.65rem) !important;
+  line-height: 2 !important;
+  text-align: center;
+  width: 100%;
+}
+
+/* ============================================
+   Joint Rating Bar styling
+   ============================================ */
+.joint-rating-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.5rem;
+  background: rgba(12, 12, 12, 0.96);
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  width: 100%;
+  flex-shrink: 0;
+  min-height: 36px;
+}
+
+.joint-rating-container .rating-section {
+  padding: 0 !important;
+}
+
+/* Inline rating row — single line, no wrap */
+.rating-inline-row {
+  flex-wrap: nowrap !important;
+  gap: 0.3rem !important;
+}
+
+.rating-inline-row .btn {
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.2rem !important;
+  padding: 2px 6px !important;
+  min-width: 48px !important;
+  height: 30px !important;
+}
+
+/* ============================================
+   Responsive: landscape mobile / small-height
+   ============================================ */
+@media (max-height: 600px) {
+  .twopage-header {
+    padding-top: 0.2rem;
+    padding-bottom: 0.15rem;
+  }
+
+  .book-spread {
+    padding: 0.25rem 0.4rem;
+  }
+
+  .book-spread::before {
+    top: 0.25rem;
+    left: 0.4rem;
+    right: 0.4rem;
+  }
+
+  .book-spine {
+    width: 8px;
+  }
+
+  .two-page-card .card-body {
+    padding: 0.35rem !important;
+  }
+
+  .two-page-card .card-header,
+  .two-page-card .card-footer {
+    padding: 0.15rem 0.4rem !important;
+    font-size: 0.7rem !important;
+  }
+
+  .two-page-card .quran-text {
+    font-size: clamp(0.7rem, 2.8vh + 0.25vw, 1.05rem) !important;
+    line-height: 1.7 !important;
+  }
+
+  .joint-rating-container {
+    padding: 0.25rem 0.5rem;
+    gap: 0.3rem;
+  }
+
+  .rating-inline-row .btn {
+    min-width: 42px !important;
+    max-width: 70px !important;
+    height: 28px !important;
+    padding: 2px 4px !important;
+    gap: 0.15rem !important;
+  }
+
+  .book-page-right .two-page-card::after,
+  .book-page-left .two-page-card::after {
+    width: 12px;
+  }
+}
+
+/* Extra-small height (e.g. iPhone SE landscape ~375px height) */
+@media (max-height: 420px) {
+  .two-page-card .card-header,
+  .two-page-card .card-footer {
+    padding: 0.1rem 0.3rem !important;
+    font-size: 0.6rem !important;
+  }
+
+  .two-page-card .card-body {
+    padding: 0.25rem !important;
+  }
+
+  .two-page-card .quran-text {
+    font-size: clamp(0.6rem, 3vh + 0.2vw, 0.9rem) !important;
+    line-height: 1.5 !important;
+  }
+
+  .twopage-header {
+    padding-top: 0.1rem;
+    padding-bottom: 0;
+  }
+
+  .twopage-header .btn-sm {
+    font-size: 0.7rem !important;
+    padding: 0.15rem 0.3rem !important;
+  }
+
+  .joint-rating-container {
+    padding: 0.15rem 0.3rem;
+  }
+
+  .rating-inline-row .btn {
+    min-width: 36px !important;
+    max-width: 60px !important;
+    height: 24px !important;
+    padding: 1px 3px !important;
+    gap: 0.1rem !important;
+    font-size: 0.65rem !important;
+  }
+
+  .book-spine {
+    width: 6px;
+  }
+
+  .book-page-right .two-page-card::after,
+  .book-page-left .two-page-card::after {
+    width: 8px;
+  }
+}
+
+/* ============================================
+   Review Container Constraints
+   ============================================ */
+.masked-review-container,
+.regular-review-container {
+  height: 100vh !important;
+  height: 100dvh !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Floating Navigation Arrows */
+.nav-arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50% !important;
+  background-color: rgba(26, 26, 46, 0.85) !important;
+  border: 1.5px solid var(--accent-gold) !important;
+  color: var(--accent-gold) !important;
+  z-index: 10;
+  transition: all var(--transition-fast) ease !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-arrow-btn:hover:not(:disabled) {
+  background-color: var(--accent-gold) !important;
+  color: var(--bg-primary) !important;
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.nav-arrow-btn:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: #666 !important;
+  background-color: rgba(20, 20, 20, 0.5) !important;
+  box-shadow: none;
+}
+
+.nav-arrow-right {
+  right: 15px;
+}
+
+.nav-arrow-left {
+  left: 15px;
+}
+
+/* Adjust layout to avoid navigation arrow overlay on smaller desktop screens */
+@media (max-width: 1200px) {
+  .nav-arrow-right {
+    right: 5px;
+  }
+  .nav-arrow-left {
+    left: 5px;
+  }
+  .nav-arrow-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 0.85rem;
+  }
+}

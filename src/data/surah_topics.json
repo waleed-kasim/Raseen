@@ -1,0 +1,92 @@
+[
+  {
+    "id": "intro",
+    "name": "مقدمة السورة وأصناف الناس",
+    "startAyah": 1,
+    "endAyah": 29
+  },
+  {
+    "id": "adam",
+    "name": "قصة آدم عليه السلام",
+    "startAyah": 30,
+    "endAyah": 39
+  },
+  {
+    "id": "bani_israel_1",
+    "name": "بنو إسرائيل - النعم والعصيان",
+    "startAyah": 40,
+    "endAyah": 74
+  },
+  {
+    "id": "baqarah",
+    "name": "قصة البقرة",
+    "startAyah": 67,
+    "endAyah": 74
+  },
+  {
+    "id": "bani_israel_2",
+    "name": "بنو إسرائيل - قسوة القلوب",
+    "startAyah": 75,
+    "endAyah": 103
+  },
+  {
+    "id": "ibrahim",
+    "name": "إبراهيم وإسماعيل والبيت الحرام",
+    "startAyah": 124,
+    "endAyah": 141
+  },
+  {
+    "id": "qiblah",
+    "name": "تحويل القبلة",
+    "startAyah": 142,
+    "endAyah": 152
+  },
+  {
+    "id": "ahkam_1",
+    "name": "أحكام متنوعة",
+    "startAyah": 153,
+    "endAyah": 177
+  },
+  {
+    "id": "siyam",
+    "name": "أحكام الصيام",
+    "startAyah": 183,
+    "endAyah": 187
+  },
+  {
+    "id": "hajj",
+    "name": "أحكام الحج والقتال",
+    "startAyah": 189,
+    "endAyah": 203
+  },
+  {
+    "id": "infaq",
+    "name": "الإنفاق في سبيل الله",
+    "startAyah": 254,
+    "endAyah": 274
+  },
+  {
+    "id": "kursi",
+    "name": "آية الكرسي",
+    "startAyah": 255,
+    "endAyah": 257
+  },
+  {
+    "id": "riba",
+    "name": "تحريم الربا",
+    "startAyah": 275,
+    "endAyah": 281
+  },
+  {
+    "id": "dayn",
+    "name": "آية الدَّين",
+    "startAyah": 282,
+    "endAyah": 283
+  },
+  {
+    "id": "khatimah",
+    "name": "خاتمة السورة",
+    "startAyah": 284,
+    "endAyah": 286
+  }
+]

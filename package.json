@@ -1,0 +1,67 @@
+{
+  "name": "tathbeet",
+  "private": true,
+  "version": "0.0.2",
+  "type": "module",
+  "description": "Smart Quran Memorization and Revision Tool (Tathbeet)",
+  "author": "User",
+  "main": "electron/main.js",
+  "scripts": {
+    "electron": "electron .",
+    "dev": "vite --host 0.0.0.0 --port 3030",
+    "build": "vite build",
+    "dist": "vite build && electron-builder",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "android:sync": "vite build && npx cap sync android",
+    "android:open": "npx cap open android",
+    "android:icons": "npx @capacitor/assets generate --android",
+    "android:build": "cd android && gradlew assembleDebug",
+    "android:full-build": "npm run build && npx cap sync android && cd android && gradlew assembleDebug",
+    "build:all": "npm run dist && npm run android:full-build"
+  },
+  "build": {
+    "appId": "com.tathbeet.app",
+    "productName": "Tathbeet",
+    "directories": {
+      "output": "dist-electron"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "data/**/*",
+      "icon.png",
+      "icon.ico"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "icon.png"
+    }
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.1.0",
+    "@capacitor/core": "^8.1.0",
+    "@fontsource/amiri-quran": "^5.2.10",
+    "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.13.1",
+    "pdf-parse": "^2.4.5",
+    "react": "^19.2.0",
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.1.0",
+    "@eslint/js": "^9.39.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "electron": "^28.3.3",
+    "electron-builder": "^24.13.3",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "typescript": "^6.0.3",
+    "vite": "^5.0.0"
+  }
+}
