@@ -1,20 +1,36 @@
-# تثبيت 🚀✨
+# رصين 🚀✨
 
 > "تعاهدوا هذا القرآن، فوالذي نفس محمد بيده لهو أشد تفلتاً من الإبل في عقلها"
 
-# Tathbeet 🚀✨
+# Raseen 🚀✨
 
 > "Commit yourself to the Quran, for by Him in Whose Hand is my soul, it slips away faster than a camel from its binding."
 
 ---
 
-## أهلاً بالحفّاظ المطورين!
+## روابط التحميل المباشر
 
-أهلاً بك في تطبيق تثبيت! هذا المشروع الذي وُلِد من قلب المعاناة اليومية والجهاد المستمر لكل حافظ للقرآن الكريم. جميعنا يدرك ذلك الشعور الممزوج بالمهابة والأسف حين تفتح المصحف لتكتشف أن الصفحة التي بذلت جهداً كبيراً في حفظها الأسبوع الماضي قد تفلتت من ذاكرتك! هنا قررنا ألا نقف مكتوفي الأيدي، فدمجنا بركة السعي القرآني وقداسته مع قوة الخوارزميات البرمجية الحديثة. تثبيت ليس مجرد تطبيق تسميع تقليدي أو جدول متابعة عادي، بل هو سلاحك التقني الذكي الذي يضمن ترسيخ حفظك في الذاكرة طويلة المدى باستخدام تقنيات الاسترجاع النشط والتكرار المتباعد. فلننطلق معاً لنبني علاقة قوية وراسخة مع كتاب الله بأسلوب عصري مرن وتقنيات حديثة!
+يسرنا توفير نسخ التشغيل الجاهزة للتحميل المباشر للتطبيق دون الحاجة لخطوات بناء معقدة:
+- نسخة أجهزة الكمبيوتر: لتشغيل التطبيق كبرنامج مستقل على نظام ويندوز، يمكنك تحميل ملف التثبيت المباشر للكمبيوتر.
+- نسخة الهواتف الذكية: لتشغيل التطبيق على هاتف المحمول، يمكنك تحميل ملف التثبيت المباشر للأندرويد وتثبيته فوراً.
+الرابط الرسمي لكافة الإصدارات والملفات: [صفحة إصدارات المشروع على غيت هاب](https://github.com/waleed-kasim/Tathbeet/releases)
 
-## Welcome, Developer-Memorizers!
+## Direct Download Links
 
-Welcome to **Tathbeet**! The application born out of the daily struggle of every Quran memorizer. We all know that mini-heart attack when you open the Mus'haf and realize the page you spent hours memorizing last week has completely vanished! Here, we decided to act, blending the divine blessings (barakah) of Quranic pursuit with the power of modern software algorithms. **Tathbeet** is not just another basic tracking app; it is your ultimate tech companion designed to lock your memorization into long-term memory using Active Recall and Spaced Repetition. Let's build a rock-solid relationship with the Book of Allah in a sleek, modern way!
+We are pleased to provide pre-built binaries for direct installation:
+- **Desktop Version (Windows):** Download the standalone installer package (`.exe`) to run the application natively on your computer.
+- **Mobile Version (Android):** Download the mobile installer package (`.apk`) and load it directly onto your smartphone.
+Official Releases & Assets Page: [Project Releases Page on GitHub](https://github.com/waleed-kasim/Tathbeet/releases)
+
+---
+
+## أهلاً بالحفّاظ
+
+أهلاً بك في تطبيق رصين! هذا المشروع الذي وُلِد من قلب المعاناة اليومية والجهاد المستمر لكل حافظ للقرآن الكريم. جميعنا يدرك ذلك الشعور الممزوج بالمهابة والأسف حين تفتح المصحف لتكتشف أن الصفحة التي بذلت جهداً كبيراً في حفظها الأسبوع الماضي قد تفلتت من ذاكرتك! هنا قررنا ألا نقف مكتوفي الأيدي، فدمجنا بركة السعي القرآني وقداسته مع قوة الخوارزميات البرمجية الحديثة. رصين ليس مجرد تطبيق تسميع تقليدي أو جدول متابعة عادي، بل هو سلاحك التقني الذكي الذي يضمن ترسيخ حفظك في الذاكرة طويلة المدى باستخدام تقنيات الاسترجاع النشط والتكرار المتباعد. إذ يهدف المشروع لبناء علاقة قوية وراسخة مع كتاب الله بأسلوب ذكي ومرن وتقنيات حديثة!
+
+## Welcome, Memorizers
+
+Welcome to **Raseen**! The application born out of the daily struggle of every Quran memorizer. We all know that mini-heart attack when you open the Mus'haf and realize the page you spent hours memorizing last week has completely vanished! Here, we decided to act, blending the divine blessings (barakah) of Quranic pursuit with the power of modern software algorithms. **Raseen** is not just another basic tracking app; it is your ultimate tech companion designed to lock your memorization into long-term memory using Active Recall and Spaced Repetition. Let's build a rock-solid relationship with the Book of Allah in a sleek, modern way!
 
 ---
 
@@ -23,7 +39,7 @@ Welcome to **Tathbeet**! The application born out of the daily struggle of every
 ### من الحفظ المؤقت إلى التثبيت الدائم
 
 الهدف الأسمى هنا هو الانتقال بالمتدرب من مرحلة الحفظ غير المستقر إلى مرحلة الإتقان والراسخ كالجبال. التطبيق مصمم خصيصاً لخدمة مرحلة ما بعد الحفظ الأولي. أهدافنا واضحة، محددة، ومباشرة:
-- تثبيت المتشابهات اللفظية: التغلب على اللبس والتداخل بين الآيات المتقاربة لفظياً من خلال حصرها وتحليلها برمجياً.
+- تثبيت المتشابهات اللفظية: التغلب على اللبس والتداخل بين الآيات المتقاربة لفظياً من خلال حصرها وإعطاء كل متشابهة علامات تميزها.
 - الربط البصري والذهني: تدريب العقل على الانتقال السلس والتلقائي بين نهاية كل صفحة وبداية الصفحة التي تليها دون انقطاع أو تلكؤ.
 - تحسين كفاءة الوقت والجهد: المراجعة بذكاء وعبر خوارزميات مدروسة بحيث تركز طاقتك الذهنية على الصفحات التي تحتاج فعلياً للمراجعة والتسميع، وتوفر وقتك في الصفحات الراسخة والمتقنة.
 
@@ -32,7 +48,7 @@ Welcome to **Tathbeet**! The application born out of the daily struggle of every
 ### From Temporary Storage to Permanent Solidification
 
 The ultimate goal here is transitioning from the "I memorized it but I'm shaky" phase to "Complete Mastery (Itqan)". The app is specifically architected for the post-memorization stage. Our milestones are clear:
-- **Solidifying Similarities (Mutashabihat):** Overcoming confusion between closely phrased verses through systematic, algorithmic grouping.
+- **Solidifying Similarities (Mutashabihat):** Overcoming confusion between closely phrased verses through systematic, algorithmic grouping and markers.
 - **Visual & Cognitive Anchoring:** Training your mind to seamlessly transition from the end of one page to the beginning of the next.
 - **Optimized Efficiency:** Reviewing smarter, not harder. You direct your mental resources to the pages that genuinely need revision, saving precious time on those already consolidated.
 
@@ -45,7 +61,7 @@ graph TD
     A[بداية المراجعة] --> B{خوارزمية التكرار المتباعد}
     B -- صفحة ضعيفة --> C[مراجعة متقاربة يومية]
     B -- صفحة قوية --> D[تباعد الفترات]
-    C --> E[الاسترجاع النشط وألعاب التحدي]
+    C --> E[الاسترجاع النشط وألعاب والتحديات]
     D --> E
     E --> F[تثبيت راسخ في الذاكرة]
 ```
@@ -88,9 +104,9 @@ We don't review everything every single day; that's exhausting and inefficient. 
 
 ### المراجعة العادية
 
-مصحف رقمي تفاعلي سريع ومريح للعين والقلب. لا يقتصر على القراءة فحسب، بل يوفر ميزة القناع النشط حيث يمكنك إخفاء أجزاء من النص أو الآيات بلمسة واحدة، لتشرع في التسميع غيباً ثم تكشف الآيات تدريجياً للتحقق من سلامة اللفظ والتشكيل بدقة.
+مصحف رقمي تفاعلي سريع ومريح للعين والقلب. لا يقتصر على القراءة فحسب، بل يوفر ميزة القناع النشط حيث يمكنك إخفاء أجزاء من النص أو الآيات بلمسة واحدة، لتشرع في التسميع غيباً ثم تكشف (ملاحظة تكشفها بنفسك التطبيق لا يحتوي ميزة تعرف على الكلام) الآيات تدريجياً للتحقق من سلامة اللفظ والتشكيل بدقة.
 
-### أدوات شبكة بينتو المساعدة
+### أدوات المساعدة
 
 واجهة التطبيق مقسمة بأسلوب شبكة بينتو العصري لتقدم لك أدوات مساعدة ترفع من جودة قراءتك وفهمك:
 - المتشابهات: هنا نُفكك عقدة الآيات المتشابهة! تقوم هذه الأداة بجمع المواضع المتقاربة لفظياً في القرآن الكريم لتفرق بينها بثقة تامة وبلا تردد أثناء إمامتك أو تسميعك غيباً.
@@ -105,7 +121,7 @@ This is the central dashboard of your consolidation workflow. Once you launch it
 
 ### Regular Review
 
-An interactive digital Mus'haf optimized for readability. It's not just for standard reading; it features a "Masked Review" mode where you can hide blocks of text or verses with a single tap, allowing you to self-recite and gradually unmask the text to verify your pronunciation and accuracy.
+An interactive digital Mus'haf optimized for readability. It's not just for standard reading; it features a "Masked Review" mode where you can hide blocks of text or verses with a single tap, allowing you to self-recite and gradually unmask the text to verify your pronunciation and accuracy (note: you unmask it yourself, the app does not contain voice recognition).
 
 ### Bento Auxiliary Tools
 

@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.tathbeet.app',
-  appName: 'Tathbeet',
+  appId: 'com.raseen.app',
+  appName: 'Raseen',
   webDir: 'dist'
 };
 

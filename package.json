@@ -1,9 +1,9 @@
 {
-  "name": "tathbeet",
+  "name": "raseen",
   "private": true,
   "version": "0.0.2",
   "type": "module",
-  "description": "Smart Quran Memorization and Revision Tool (Tathbeet)",
+  "description": "Smart Quran Memorization and Revision Tool (Raseen)",
   "author": "User",
   "main": "electron/main.js",
   "scripts": {
@@ -21,8 +21,8 @@
     "build:all": "npm run dist && npm run android:full-build"
   },
   "build": {
-    "appId": "com.tathbeet.app",
-    "productName": "Tathbeet",
+    "appId": "com.raseen.app",
+    "productName": "Raseen",
     "directories": {
       "output": "dist-electron"
     },
