@@ -68,11 +68,11 @@ graph TD
 
 ### الاسترجاع النشط
 
-بدلاً من مجرد فتح المصحف والقراءة السلبية المستمرة ظناً منك أنك تحفظ جيداً (وهو ما يعرف علمياً بوهم الإتقان البصري)، يجبر تطبيقنا خلايا دماغك على بذل مجهود حقيقي لاسترجاع الآيات والمعلومات. إن الألعاب والتحديات المتوفرة تحفز العقل وتنشئ مسارات عصبية قوية للآيات، مما يضمن تثبيتها واستقرارها بشكل عملي وفعال.
+يركز تطبيقنا على بذل مجهود حقيقي لاسترجاع الآيات والمعلومات (حيث أثبتت الدراسات أن هذه الطريقة أفضل لتثبيت الحفظ من مجرد القراءة المتكررة). إن الألعاب والتحديات المتوفرة تحفز العقل وتنشئ مسارات عصبية قوية للآيات، مما يضمن تثبيتها واستقرارها بشكل عملي وفعال.
 
 ### التكرار المتباعد
 
-نحن لا نراجع كل شيء يومياً (فهذا يؤدي إلى تشتيت الجهد وهدر الوقت). يستخدم التطبيق خوارزمية ذكية لاختيار وتوزيع عشوائي مرجح متعدد الأحواض، حيث يقيس التطبيق مستوى تمكنك من الحفظ ويصنف الصفحات المحفوظة إلى ستة أحواض برمجية مختلفة وهي حوض التقاطع (للصفحات المشتركة في حوضين أو أكثر ولها الأولوية الكبرى)، وحوض المحاصرة (للصفحة الضعيفة بين صفحتين قويتين)، وحوض المستحقة (للصفحات التي حان وقت مراجعتها)، وحوض الخطر (للصفحات ذات التكرار الضعيف أو كثيرة التعثر)، وحوض الجديدة (للصفحات المضافة حديثاً)، وحوض الظل (للصفحات المستقرة جداً ذات الفترات الطويلة). يتم التنقل والاختيار بين هذه الأحواض بنسب مئوية وأوزان عشوائية ذكية، ثم تُختار الصفحة المراد مراجعتها بناءً على أوزان تفاعلية كعدد أيام التأخر وعامل سهولة الصفحة وسرعة إتقان السورة، مما يضمن تكراراً مرناً يكسر روتين التكرار التقليدي ويراعي عامل العشوائية والفروق الفردية.
+نحن نعتمد نظام مراجعة ذكي وموزع بدلاً من مراجعة كل شيء يومياً (حيث يضمن هذا النظام توجيه جهدك للمواضع الأكثر حاجة وتوفير وقتك للصفحات المتقنة). يستخدم التطبيق خوارزمية ذكية لاختيار وتوزيع عشوائي مرجح متعدد الأحواض، حيث يقيس التطبيق مستوى تمكنك من الحفظ ويصنف الصفحات المحفوظة إلى ستة أحواض برمجية مختلفة وهي حوض التقاطع (للصفحات المشتركة في حوضين أو أكثر ولها الأولوية الكبرى)، وحوض المحاصرة (للصفحة الضعيفة بين صفحتين قويتين)، وحوض المستحقة (للصفحات التي حان وقت مراجعتها)، وحوض الخطر (للصفحات ذات التكرار الضعيف أو كثيرة التعثر)، وحوض الجديدة (للصفحات المضافة حديثاً)، وحوض الظل (للصفحات المستقرة جداً ذات الفترات الطويلة). يتم التنقل والاختيار بين هذه الأحواض بنسب مئوية وأوزان عشوائية ذكية، ثم تُختار الصفحة المراد مراجعتها بناءً على أوزان تفاعلية كعدد أيام التأخر وعامل سهولة الصفحة وسرعة إتقان السورة، مما يضمن تكراراً مرناً يكسر روتين التكرار التقليدي ويراعي عامل العشوائية والفروق الفردية.
 
 ## The Magic Mix: Scientific Techniques
 
@@ -88,11 +88,11 @@ graph TD
 
 ### Active Recall
 
-Instead of passive reading (which leads to the illusion of competence), our app forces your brain to make a real effort to retrieve verses and information. The interactive challenges stimulate cognitive processes, creating strong neural pathways for the verses, making memorization stick in a practical and effective way.
+Our app focuses on active retrieval, encouraging your brain to make a real effort to recall verses and information (which scientific research has shown to be far superior to simple repetitive reading for long-term retention). The interactive challenges stimulate cognitive processes, creating strong neural pathways for the verses, making memorization stick in a practical and effective way.
 
 ### Spaced Repetition
 
-We do not review everything every day (that leads to fragmented effort and wasted time). The app utilizes a Stochastic Multi-Pool Selection Algorithm that classifies pages into six dynamic pools based on your performance: `intersection` (shared pages between two or more pools, highest weight: 100), `besieged` (weak pages sandwiched between strong ones, weight: 80), `due` (pages scheduled for review, weight: 60), `risk` (pages with poor history or high failures, weight: 25), `new` (newly added pages, weight: 15), and `shadow` (stable pages with long intervals, weight: 5). Selection between these pools is performed via a weighted roulette mechanism, and within the chosen pool, the specific page is selected using dynamic weights (days overdue, ease factor, and Surah completion status). This non-deterministic system ensures a flexible workflow that integrates randomness to prevent repetitive review routines.
+We implement an optimized, distributed review schedule instead of reviewing everything daily (this channels your energy to the pages that need it most, preserving time for consolidated pages). The app utilizes a Stochastic Multi-Pool Selection Algorithm that classifies pages into six dynamic pools based on your performance: `intersection` (shared pages between two or more pools, highest weight: 100), `besieged` (weak pages sandwiched between strong ones, weight: 80), `due` (pages scheduled for review, weight: 60), `risk` (pages with poor history or high failures, weight: 25), `new` (newly added pages, weight: 15), and `shadow` (stable pages with long intervals, weight: 5). Selection between these pools is performed via a weighted roulette mechanism, and within the chosen pool, the specific page is selected using dynamic weights (days overdue, ease factor, and Surah completion status). This non-deterministic system ensures a flexible workflow that integrates randomness to prevent repetitive review routines.
 
 ---
 
