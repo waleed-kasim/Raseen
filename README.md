@@ -1,8 +1,8 @@
-# رصين 🚀✨
+# رصين
 
 > "تعاهدوا هذا القرآن، فوالذي نفس محمد بيده لهو أشد تفلتاً من الإبل في عقلها"
 
-# Raseen 🚀✨
+# Raseen
 
 > "Commit yourself to the Quran, for by Him in Whose Hand is my soul, it slips away faster than a camel from its binding."
 
@@ -10,51 +10,53 @@
 
 ## روابط التحميل المباشر
 
-يسرنا توفير نسخ التشغيل الجاهزة للتحميل المباشر للتطبيق دون الحاجة لخطوات بناء معقدة:
-- نسخة أجهزة الكمبيوتر: لتشغيل التطبيق كبرنامج مستقل على نظام ويندوز، يمكنك تحميل ملف التثبيت المباشر للكمبيوتر.
-- نسخة الهواتف الذكية: لتشغيل التطبيق على هاتف المحمول، يمكنك تحميل ملف التثبيت المباشر للأندرويد وتثبيته فوراً.
-الرابط الرسمي لكافة الإصدارات والملفات: [صفحة إصدارات المشروع على غيت هاب](https://github.com/waleed-kasim/Tathbeet/releases)
+يسرنا توفير نسخ التشغيل الجاهزة للتحميل المباشر للتطبيق دون الحاجة لخطوات بناء معقدة (الروابط الرسمية للتحميل متوفرة في القسم الإنجليزي أدناه)
+
+- نسخة أجهزة الكمبيوتر: لتشغيل التطبيق كبرنامج مستقل على نظام ويندوز (يمكن تحميل ملف التثبيت المباشر للكمبيوتر من روابط التحميل أدناه)
+- نسخة الهواتف الذكية: لتشغيل التطبيق على الهاتف المحمول (يمكن تحميل ملف التثبيت المباشر للأندرويد وتثبيته فوراً من روابط التحميل أدناه)
 
 ## Direct Download Links
 
 We are pleased to provide pre-built binaries for direct installation:
-- **Desktop Version (Windows):** Download the standalone installer package (`.exe`) to run the application natively on your computer.
-- **Mobile Version (Android):** Download the mobile installer package (`.apk`) and load it directly onto your smartphone.
-Official Releases & Assets Page: [Project Releases Page on GitHub](https://github.com/waleed-kasim/Tathbeet/releases)
+
+- **Desktop Version (Windows):** Download the standalone installer package (`.exe`) to run the application natively on your computer: [Download Windows Installer](https://github.com/waleed-kasim/Tathbeet/releases)
+- **Mobile Version (Android):** Download the mobile installer package (`.apk`) and load it directly onto your smartphone: [Download Android APK](https://github.com/waleed-kasim/Tathbeet/releases)
 
 ---
 
 ## أهلاً بالحفّاظ
 
-أهلاً بك في تطبيق رصين (المشروع الذي ولد من قلب المعاناة اليومية والجهاد المستمر لكل حافظ للقرآن الكريم). جميعنا يدرك ذلك الشعور الممزوج بالمهابة والأسف حين تفتح المصحف لتكتشف أن الصفحة التي بذلت جهداً كبيراً في حفظها الأسبوع الماضي قد تفلتت من ذاكرتك (هنا قررنا ألا نقف مكتوفي الأيدي، فدمجنا بركة السعي القرآني وقداسته مع قوة الخوارزميات البرمجية الحديثة). رصين ليس مجرد تطبيق تسميع تقليدي أو جدول متابعة عادي، بل هو سلاحك التقني الذكي الذي يضمن ترسيخ حفظك في الذاكرة طويلة المدى باستخدام تقنيات الاسترجاع النشط والتكرار المتباعد. إذ يهدف المشروع لبناء علاقة قوية وراسخة مع كتاب الله بأسلوب ذكي ومرن وتقنيات حديثة!
+تطبيق رصين هو نظام برمجى مخصص لمساعدة حفاظ القرآن الكريم على ترسيخ وتثبيت حفظهم وتفادي النسيان. يدمج التطبيق بين المنهجية القرآنية التقليدية والحلول البرمجية الحديثة لتقديم تجربة مراجعة متكاملة. لا يقتصر رصين على المتابعة التقليدية، بل يوفر بيئة تقنية لترسيخ الحفظ في الذاكرة طويلة المدى بالاعتماد على تقنيات الاسترجاع النشط والتكرار المتباعد، مما يضمن الاستمرارية والفاعلية في تثبيت الآيات بأسلوب مرن ومنظم.
 
 ## Welcome, Memorizers
 
-Welcome to **Raseen**! The application born out of the daily struggle of every Quran memorizer. We all know that feeling of awe and regret when you open the Mus'haf and realize the page you spent hours memorizing last week has slipped away from your memory! Here, we decided to act, blending the divine blessings (barakah) of Quranic pursuit with the power of modern software algorithms. **Raseen** is not just another basic tracking app; it is your ultimate tech companion designed to lock your memorization into long-term memory using Active Recall and Spaced Repetition. Let's build a rock-solid relationship with the Book of Allah in a sleek, modern way!
+**Raseen** is a software system designed to help Quran memorizers consolidate their memorization and prevent retention loss. By combining traditional Quranic review practices with modern software algorithms, Raseen provides a structured technical environment to secure memorization in long-term memory. Using Active Recall and Spaced Repetition, the application optimizes the review workflow to ensure flexibility, high efficiency, and sustainable retention.
 
 ---
 
 ## فكرة التطبيق وأهدافه
 
-### من الحفظ المؤقت إلى التثبيت الدائم
+### من الحفظ الأولي إلى الإتقان الدائم
 
-الهدف الأسمى هنا هو الانتقال بالمتدرب من مرحلة الحفظ غير المستقر إلى مرحلة الإتقان والراسخ كالجبال. التطبيق مصمم خصيصاً لخدمة مرحلة ما بعد الحفظ الأولي. أهدافنا واضحة، محددة، ومباشرة:
-- تثبيت المتشابهات اللفظية: التغلب على اللبس والتداخل بين الآيات المتقاربة لفظياً من خلال حصرها وإعطاء كل متشابهة علامات تميزها.
-- الربط البصري والذهني: تدريب العقل على الانتقال السلس والتلقائي بين نهاية كل صفحة وبداية الصفحة التي تليها دون انقطاع أو تلكؤ.
-- تحسين كفاءة الوقت والجهد: المراجعة بذكاء وعبر خوارزميات مدروسة بحيث تركز طاقتك الذهنية على الصفحات التي تحتاج فعلياً للمراجعة والتسميع، وتوفر وقتك في الصفحات الراسخة والمتقنة.
+يهدف التطبيق إلى نقل المستخدم من مرحلة الحفظ غير المستقر إلى مرحلة الإتقان والضبط. تم تصميم رصين لخدمة مرحلة ما بعد الحفظ الأولي من خلال الأهداف التالية:
+
+- ضبط المتشابهات اللفظية: حل إشكالية التداخل بين الآيات المتقاربة لفظيا عبر حصرها وتحديد الفروق الدقيقة بينها.
+- الربط البصري والذهني: تدريب الذهن على الانتقال السلس بين نهاية كل صفحة وبداية الصفحة التالية لضمان التدفق المستمر أثناء التلاوة.
+- رفع كفاءة المراجعة: توجيه الجهد الذهني نحو الصفحات التي تحتاج للمراجعة الفعالية اعتمادا على خوارزميات قياس الأداء وتوفير الوقت المستهلك في الصفحات المتقنة.
 
 ## Concept & Core Goals
 
-### From Temporary Storage to Permanent Solidification
+### From Initial Memorization to Long-Term Mastery
 
-The ultimate goal here is transitioning from the shaky memorization phase to complete and solid mastery. The app is specifically designed for the post-initial memorization stage. Our objectives are clear, specific, and direct:
-- **Solidifying Similarities (Mutashabihat):** Overcoming confusion between closely phrased verses through systematic grouping and distinctive markers.
-- **Visual & Cognitive Anchoring:** Training your mind to transition seamlessly from the end of one page to the beginning of the next without interruption.
-- **Optimized Efficiency:** Reviewing smarter, not harder. You direct your mental energy to the pages that genuinely need revision, saving time on those already consolidated.
+The primary objective is to transition the user from unstable memorization to complete mastery. Raseen is engineered specifically for the post-initial memorization phase:
+
+- **Solidifying Similarities (Mutashabihat):** Resolving confusion between closely phrased verses through systematic identification and categorization.
+- **Visual & Cognitive Anchoring:** Training the mind to transition seamlessly from the end of one page to the beginning of the next to prevent hesitation.
+- **Optimizing Review Efficiency:** Directing mental effort toward pages requiring urgent revision based on automated evaluation, reducing redundant reviews of consolidated pages.
 
 ---
 
-## الخلطة السحرية: التقنيات العلمية
+## الأسس العلمية والمنهجية
 
 ```mermaid
 graph TD
@@ -68,13 +70,21 @@ graph TD
 
 ### الاسترجاع النشط
 
-يركز تطبيقنا على بذل مجهود حقيقي لاسترجاع الآيات والمعلومات (حيث أثبتت الدراسات أن هذه الطريقة أفضل لتثبيت الحفظ من مجرد القراءة المتكررة). إن الألعاب والتحديات المتوفرة تحفز العقل وتنشئ مسارات عصبية قوية للآيات، مما يضمن تثبيتها واستقرارها بشكل عملي وفعال.
+يعتمد التطبيق على مبدأ الاسترجاع النشط عبر استثارة الذاكرة لاستدعاء الآيات بدلا من القراءة السلبية المتكررة. تساعد الألعاب والتدريبات التفاعلية المدمجة على تنشيط الروابط الذهنية الخاصة بالنصوص القرآنية، مما يعزز ترسيخها في الذاكرة طويلة المدى بشكل عملي.
 
 ### التكرار المتباعد
 
-نحن نعتمد نظام مراجعة ذكي وموزع بدلاً من مراجعة كل شيء يومياً (حيث يضمن هذا النظام توجيه جهدك للمواضع الأكثر حاجة وتوفير وقتك للصفحات المتقنة). يستخدم التطبيق خوارزمية ذكية لاختيار وتوزيع عشوائي مرجح متعدد الأحواض، حيث يقيس التطبيق مستوى تمكنك من الحفظ ويصنف الصفحات المحفوظة إلى ستة أحواض برمجية مختلفة وهي حوض التقاطع (للصفحات المشتركة في حوضين أو أكثر ولها الأولوية الكبرى)، وحوض المحاصرة (للصفحة الضعيفة بين صفحتين قويتين)، وحوض المستحقة (للصفحات التي حان وقت مراجعتها)، وحوض الخطر (للصفحات ذات التكرار الضعيف أو كثيرة التعثر)، وحوض الجديدة (للصفحات المضافة حديثاً)، وحوض الظل (للصفحات المستقرة جداً ذات الفترات الطويلة). يتم التنقل والاختيار بين هذه الأحواض بنسب مئوية وأوزان عشوائية ذكية، ثم تُختار الصفحة المراد مراجعتها بناءً على أوزان تفاعلية كعدد أيام التأخر وعامل سهولة الصفحة وسرعة إتقان السورة، مما يضمن تكراراً مرناً يكسر روتين التكرار التقليدي ويراعي عامل العشوائية والفروق الفردية.
+يطبق النظام خوارزمية متطورة لتوزيع فترات المراجعة وتجنب هدر الجهد اليومي في الصفحات المتقنة. تعتمد الخوارزمية على تصنيف الصفحات المحفوظة ديناميكيا إلى ستة أحواض برمجية رئيسية:
+- حوض التقاطع: يضم الصفحات المشتركة بين تصنيفين أو أكثر وتمنح له الأولوية القصوى.
+- حوض المحاصرة: يضم الصفحة الضعيفة الواقعة بين صفحتين قويتين لضمان عدم تفلتها.
+- حوض المستحقة: يضم الصفحات التي حان موعد مراجعتها وفقا لجدول زمني مرن.
+- حوض الخطر: يشتمل على الصفحات ذات معدلات التعثر المرتفعة أو التكرار الضعيف.
+- حوض الجديدة: يضم الصفحات المضافة حديثا لضمان تثبيتها الأولي.
+- حوض الظل: مخصص للصفحات المستقرة ذات الفترات المتباعدة جدا.
 
-## The Magic Mix: Scientific Techniques
+تدار عملية الاختيار والتنقل بين هذه الأحواض عبر آلية عشوائية مرجحة (عجلة الروليت). ويتم انتقاء الصفحات داخل كل حوض بناء على مصفوفة أوزان تفاعلية تشمل: عدد أيام التأخر، وعامل السهولة، ونسبة إنجاز السورة، مما يوفر نظام مراجعة مرن يراعي الفروق الفردية ويحد من التكرار النمطي.
+
+## Methodology & Scientific Foundations
 
 ```mermaid
 graph TD
@@ -88,11 +98,19 @@ graph TD
 
 ### Active Recall
 
-Our app focuses on active retrieval, encouraging your brain to make a real effort to recall verses and information (which scientific research has shown to be far superior to simple repetitive reading for long-term retention). The interactive challenges stimulate cognitive processes, creating strong neural pathways for the verses, making memorization stick in a practical and effective way.
+Raseen prioritizes active retrieval to stimulate memory reconstruction instead of passive repetitive reading. Interactive challenges reinforce neural pathways associated with Quranic text, maximizing long-term cognitive consolidation.
 
 ### Spaced Repetition
 
-We implement an optimized, distributed review schedule instead of reviewing everything daily (this channels your energy to the pages that need it most, preserving time for consolidated pages). The app utilizes a Stochastic Multi-Pool Selection Algorithm that classifies pages into six dynamic pools based on your performance: `intersection` (shared pages between two or more pools, highest weight: 100), `besieged` (weak pages sandwiched between strong ones, weight: 80), `due` (pages scheduled for review, weight: 60), `risk` (pages with poor history or high failures, weight: 25), `new` (newly added pages, weight: 15), and `shadow` (stable pages with long intervals, weight: 5). Selection between these pools is performed via a weighted roulette mechanism, and within the chosen pool, the specific page is selected using dynamic weights (days overdue, ease factor, and Surah completion status). This non-deterministic system ensures a flexible workflow that integrates randomness to prevent repetitive review routines.
+The system implements a Stochastic Multi-Pool Selection Algorithm to optimize review intervals and direct effort away from consolidated material. Memorized pages are classified into six dynamic pools:
+- **Intersection:** Shared pages between multiple conditions (highest priority, weight: 100).
+- **Besieged:** Weak pages sandwiched between two strong pages (weight: 80).
+- **Due:** Pages scheduled for review based on dynamic interval tracking (weight: 60).
+- **Risk:** Pages with a history of high failure rates or low recall frequency (weight: 25).
+- **New:** Recently added pages undergoing initial stabilization (weight: 15).
+- **Shadow:** Stable pages with maximized intervals (weight: 5).
+
+Selection between these pools is performed via a weighted roulette mechanism. Within the chosen pool, individual pages are selected using dynamic weights (days overdue, ease factor, and Surah completion status). This non-deterministic scheduler prevents routine fatigue while adapting to individual retention curves.
 
 ---
 
@@ -100,149 +118,161 @@ We implement an optimized, distributed review schedule instead of reviewing ever
 
 ### المراجعة الذكية
 
-هذه هي لوحة التحكم المركزية لعمليات التثبيت والضبط والتسميع المخفي. بمجرد دخولك، يعرض التطبيق صفحتك المحددة برمجياً بناءً على خوارزمية التكرار المتباعد. في هذا القسم، تظهر الكلمات مخفية بالكامل وتبدأ في الانكشاف كلمة بكلمة إما يدوياً بالنقر أو تلقائياً بنظام التوقيت الذكي الذي يزن الكلمة القرآنية بناءً على طولها وصعوبتها وموقعها القرآني. كما يمكنك إضافة تأملاتك وملاحظاتك الشخصية، أو تمييز متشابهاتها اللفظية فوراً.
+تمثل المراجعة الذكية لوحة التحكم المخصصة للتسميع الذاتي واختبار قوة الحفظ. يعرض التطبيق الصفحة المحددة بناء على خوارزمية التكرار المتباعد، وتظهر الكلمات محجوبة بالكامل. تنكشف الكلمات تتابعا إما يدويا عن طريق النقر أو تلقائيا عبر محرك التوقيت الذكي الذي يحسب زمن ظهور الكلمة تبعا لطولها، ودرجة صعوبتها، وموقعها الإعرابي والقرآني. تتيح هذه الواجهة أيضا تدوين الملاحظات والروابط الذهنية وتحديد المتشابهات اللفظية بشكل فوري.
 
 ### المراجعة العادية
 
-مصحف رقمي تفاعلي سريع ومريح للعين والقلب لقراءة القرآن بصفحات كاملة دون حجب أو إخفاء للكلمات. يتيح لك هذا القسم تصفح المصحف وقراءة محفوظاتك كأي مصحف ورقي تقليدي، مع ميزة فريدة لتعتيم الأجزاء غير المحفوظة فقط في الصفحات المشتركة لتنبيهك. بعد الانتهاء من قراءة الصفحة، تقوم بتقييم حفظك ذاتياً من واحد إلى خمسة (ممتاز، سهل، جيد، صعب، نسيت) لتقوم خوارزمية التكرار المتباعد بإعادة جدولة الصفحة تلقائياً.
+واجهة قراءة رقمية تعرض صفحات المصحف كاملة دون حجب للكلمات، وتقدم تجربة تصفح تفاعلية ومريحة للعين. توفر المراجعة العادية ميزة تعتيم الأجزاء غير المحفوظة في الصفحات المشتركة لتوجيه انتباه القارئ. يقوم المستخدم بعد إتمام القراءة بتقييم مستوى حفظه ذاتيا من درجة واحدة إلى خمس درجات (ممتاز، سهل، جيد، صعب، نسيت)، ليعاد جدولة الصفحة تلقائيا بناء على هذا التقييم.
 
 ### أدوات المساعدة
 
-واجهة التطبيق مقسمة بأسلوب شبكة بينتو لتقدم لك أدوات مساعدة ترفع من جودة قراءتك وفهمك:
-- المتشابهات: أداة تفاعلية متطورة تعتمد على النظام المداري الكوني لتفكيك الآيات المتشابهة لفظياً، حيث تظهر بطاقة مركزية ومحيط مداري يحتوي على كرات تفاعلية قابلة للسحب والإفلات توضح لك الفروق اللفظية والخرائط الذهنية والقواعد الضابطة لكل متشابهة لتثبيتها دون ارتباك.
-- المواضيع: لربط الحفظ بالفهم والتدبر. نقسم لك الصفحات والسور حسب الموضوعات والقصص القرآنية، حيث يفتح لك كل موضوع بناءً على حفظك لصفحاته المرتبطة.
-- عرض الروابط: نعرض لك الروابط الذهنية التي تربط نهاية الصفحة بالصفحة التي تليها لتلافي الانقطاع أو التلعثم عند قلب الصفحات.
+تم تصميم واجهة الأدوات المساعدة وفق نمط شبكة بينتو لتسهيل الوصول للمزايا التالية:
+- المتشابهات: أداة متطورة تعتمد على نموذج النظام المداري الكوني لتفكيك الآيات المتشابهة لفظيا. تعرض الأداة بطاقة مركزية ومحيطا مداريا يحتوي على كرات تفاعلية قابلة للسحب والإفلات توضح الفروق اللفظية، والخرائط الذهنية، والقواعد الضابطة لكل آية متشابهة لتجنب التداخل.
+- المواضيع: أداة لربط الحفظ بالفهم والتدبر، حيث يتم تقسيم السور والصفحات تبعا للموضوعات والقصص القرآنية، وتتاح هذه الموضوعات للمستخدم تدريجيا وفق تقدمه في الحفظ.
+- عرض الروابط: تعرض الأداة الروابط الذهنية واللفظية التي تربط نهاية كل صفحة ببداية الصفحة التالية لتفادي التلعثم أو الانتقال أثناء الانتقال بين الصفحات.
 
 ## App Modules in Detail
 
 ### Smart Review
 
-This is the central control panel for revision and masked self-recitation. Once opened, the algorithm presents the optimal page selected for review. Words are hidden by default and unmask word-by-word either manually by tapping or automatically via Smart Timing, which computes reading delay based on word length, complexity, and Quranic accents. You can also attach personal reflections and note similar verses immediately.
+The central interface for active recall and masked self-recitation. The application displays the designated review page with all words hidden. Words are unmasked sequentially either manually via user interaction or automatically through the Smart Timing engine. This engine calculates word display duration based on word length, complexity, and Quranic accents. Users can also record personal notes, cognitive anchors, and identify similar verses.
 
 ### Regular Review
 
-An interactive digital Mus'haf optimized for comfortable reading. Unlike the smart review, this displays the pages fully without any word masking or hiding. It functions as a traditional Mus'haf reader, with a helper feature that blurs non-memorized sibling chunks in shared pages. After reading, you self-evaluate your retention from 1 to 5 (Excellent, Easy, Good, Hard, Forgotten) to recalibrate the next review interval.
+An interactive digital Mus'haf optimized for traditional reading, displaying pages fully without word masking. It features visual blurring of non-memorized sibling chunks in shared pages to maintain focus. Upon completing a page, the user self-evaluates retention on a 1-to-5 scale (Excellent, Easy, Good, Hard, Forgotten), which triggers the spaced repetition algorithm to recalibrate the next review interval.
 
 ### Bento Auxiliary Tools
 
-The UI utilizes a Bento Grid layout to offer tools that elevate comprehension and retention:
-- **Similarities (Mutashabihat):** Advanced cosmic orbital interface where you drag and drop interactive satellites representing visual layout, Surah context, verse endings, and memorization rules to clear any confusion between closely phrased verses.
-- **Thematic Blocks (Themes):** Connecting retention with understanding. We partition Surahs into thematic blocks that unlock dynamically as you memorize the corresponding pages.
-- **Links View:** Displaying visual and mental anchors that link the last verse of a page to the first verse of the next for uninterrupted transitions.
+Organized in a Bento Grid layout, this module provides key features to enhance comprehension and retention:
+- **Similarities (Mutashabihat):** An advanced cosmic orbital interface where users drag and drop interactive satellites representing visual layouts, Surah contexts, verse endings, and memorization rules to resolve confusion between closely phrased verses.
+- **Thematic Blocks (Themes):** Connects memorization with thematic structure. Surahs are divided into contextual blocks that unlock dynamically as corresponding pages are memorized.
+- **Links View:** Displays cognitive and visual anchors that connect the final verse of a page to the first verse of the next, preventing hesitation during page transitions.
 
 ---
 
 ## ألعاب التحدي وتنشيط الذاكرة
 
-القسم المفضل للجميع! لقد حولنا عملية التثبيت التقليدية والمكررة إلى تحديات تفاعلية وألعاب ذهنية تنشط العقل وتختبر قوة حفظك من زوايا مختلفة وجديدة تضمن عدم ملل الحافظ وتزيد من سرعة بديهته، حيث تعتمد جميع هذه الألعاب على نمط الاختيار من متعدد لتسهيل المراجعة وتأكيد الإجابات دون الحاجة إلى تعرف صوتي على الكلام أو عمليات كتابة معقدة:
+يتضمن التطبيق قسما خاصا بالاختبارات التفاعلية المصممة لقياس جودة الحفظ من زوايا متعددة وتنشيط الذاكرة البصرية واللفظية. تعتمد جميع الألعاب على نمط الاختيار من متعدد لتسهيل المراجعة وتأكيد الإجابات دون الحاجة إلى معالجة الصوت أو الكتابة اليدوية:
 
-١. تعرف على الصفحة: يعرض عليك التطبيق النص الكامل لصفحة قرآنية، وعليك تحديد رقم الصفحة الصحيح من بين أربعة خيارات أرقام صفحات معروضة لبناء ذاكرة بصرية قوية لموقع الصفحة.
-
-٢. تحدي الترتيب: يعرض عليك التطبيق نصين عشوائيين من صفحتين محفوظتين، ومهمتك هي تحديد أيهما تأتي أولاً في المصحف من خلال الاختيار بينهما لمعرفة الترابط التتابعي للصفحات.
-
-٣. السابق واللاحق: يعرض لك التطبيق آية معينة، ويتوجب عليك تحديد الآية السابقة لها مباشرة والآية اللاحقة لها من خلال اختيار الإجابة الصحيحة من عمودين يحتوي كل منهما على أربعة خيارات من متعدد لضبط تماسك الآيات.
-
-٤. ما الأول: يعرض لك التطبيق الآية الأخيرة من صفحة معينة ورقمها، ويطلب منك تحديد الآية الأولى التي تبدأ بها هذه الصفحة من بين أربعة خيارات نصية لضبط بداية الصفحات.
-
-٥. ما الأخير: يعرض لك التطبيق الآية الأولى من صفحة معينة ورقمها، ويطلب منك تحديد الآية الأخيرة التي تنتهي بها هذه الصفحة من بين أربعة خيارات نصية لضبط نهايات الصفحات.
-
-٦. رقم الآية: تحدي الربط الرقمي الدقيق، حيث يعرض عليك التطبيق آية معينة ويطلب منك تحديد رقمها الصحيح من بين أربعة خيارات أرقام.
-
-٧. الآية من الرقم: يعرض عليك التطبيق سورة ورقم آية ورقم صفحة، ويتحداك لتحديد نص الآية المطابق والمناسب لها تماماً من بين أربعة خيارات نصوص معروضة.
-
-٨. اختبار الروابط: يعرض لك التطبيق الآية الأخيرة من صفحة معينة، وعليك اختيار الآية الأولى التي تبدأ بها الصفحة التالية مباشرة من بين أربعة خيارات لتأكيد روابط نهايات وبدايات الصفحات.
+١. تعرف على الصفحة: يعرض التطبيق النص الكامل لصفحة قرآنية، ويتعين على المستخدم تحديد رقم الصفحة الصحيح من بين أربعة خيارات لبناء ذاكرة بصرية لمواقع الصفحات.
+٢. تحدي الترتيب: يعرض التطبيق مقطعين عشوائيين من صفحتين محفوظتين، والمطلوب هو تحديد الصفحة التي تسبق الأخرى في ترتيب المصحف من خلال الاختيار بينهما لضبط التتابع.
+٣. السابق واللاحق: يعرض التطبيق آية محددة، ويطلب من المستخدم اختيار الآية السابقة لها والآية اللاحقة لها مباشرة من قائمتين منفصلتين تحتوي كل منهما على أربعة خيارات.
+٤. ما الأول: يعرض التطبيق الآية الأخيرة من صفحة معينة ورقمها، ويطلب تحديد الآية الأولى التي تبدأ بها تلك الصفحة من بين أربعة خيارات نصية لضبط بدايات الصفحات.
+٥. ما الأخير: يعرض التطبيق الآية الأولى من صفحة معينة ورقمها، ويطلب تحديد الآية الأخيرة التي تنتهي بها تلك الصفحة من بين أربعة خيارات نصية لضبط نهايات الصفحات.
+٦. رقم الآية: تحدي الربط الرقمي، حيث يعرض التطبيق آية قرآنية ويطلب تحديد رقمها الصحيح من بين أربعة خيارات رقمية.
+٧. الآية من الرقم: يعرض التطبيق اسم السورة ورقم الآية ورقم الصفحة، ويطلب تحديد النص المطابق للآية تماما من بين أربعة خيارات نصية.
+٨. اختبار الروابط: يعرض التطبيق الآية الأخيرة من صفحة معينة، ويتعين على المستخدم تحديد الآية الأولى من الصفحة التالية مباشرة من بين أربعة خيارات لتأكيد روابط بدايات ونهايات الصفحات.
 
 ## Challenge Games
 
-We transformed routine revision into engaging cognitive games that test your recall from different angles. All these games are designed strictly around multiple-choice questions to facilitate learning and ensure quick retention without requiring voice recognition or typing:
+Raseen features interactive quizzes designed to evaluate memorization quality and stimulate visual and verbal recall. All games are strictly structured around multiple-choice questions to streamline review and confirmation without requiring speech recognition or typing:
 
-1. **Page Recognition:** The game shows the full text of a page and challenges you to identify the correct page number from four multiple-choice options.
-2. **Sequence & Ordering:** Displays random snippets from two different pages and asks you to select which page comes first in the Mus'haf layout (2 options).
-3. **Prev & Next:** Displays a verse and prompts you to select its immediate preceding and succeeding verses from two separate 4-option lists.
-4. **First Ayah:** Shows the last verse of a page and quizzes you on its absolute first verse, selected from four options.
-5. **Last Ayah:** Shows the first verse of a page and quizzes you on its absolute last verse, selected from four options.
-6. **Ayah to Number:** Displays a verse text and asks you to select its exact verse number from four options.
-7. **Number to Ayah:** Provides a Surah name, page number, and verse number, prompting you to choose the correct corresponding verse text from four options.
-8. **Links Quiz:** Shows the last verse of page N and prompts you to select the correct starting verse of page N+1 from four options.
+1. **Page Recognition:** Displays the full text of a page and prompts the user to identify the correct page number from four options.
+2. **Sequence & Ordering:** Displays random snippets from two memorized pages and asks the user to determine which page precedes the other in the Mus'haf layout.
+3. **Prev & Next:** Displays a verse and requires the user to select its immediate preceding and succeeding verses from two separate four-option lists.
+4. **First Ayah:** Shows the last verse of a page and its page number, prompting the user to select the first verse of that page from four options.
+5. **Last Ayah:** Shows the first verse of a page and its page number, prompting the user to select the last verse of that page from four options.
+6. **Ayah to Number:** Displays a verse and asks the user to select its exact verse number from four options.
+7. **Number to Ayah:** Provides a Surah name, page number, and verse number, requiring the user to identify the correct verse text from four options.
+8. **Links Quiz:** Shows the last verse of page N and requires the user to select the starting verse of page N+1 from four options.
 
 ---
 
 ## المكونات التقنية والبناء
 
-تم بناء التطبيق بهيكل حديث ومتين يضمن تشغيله كبرنامج لسطح المكتب أو كتطبيق للهواتف الذكية بكفاءة وسرعة فائقتين:
-- بيئة العمل الأساسية: ريأكت تسعة عشر مدعوماً بأداة فايت لضمان سرعة التحميل الفورية وتحديث العناصر بسلاسة تامة دون استهلاك موارد الجهاز.
-- التنسيق والتصميم: تخصيص صفحات التنسيق النقي مع مرونة تصميم شبكة بينتو الجذاب بألوان هادئة ومريحة للعين أثناء القراءة الليلية الطويلة وساعات المراجعة.
-- برنامج سطح المكتب: ملفات التشغيل في مجلد إليكترون تسمح بتهيئة وبناء نسخة متكاملة لأجهزة الكمبيوتر (ويندوز وماك).
-- تطبيق الهواتف الذكية: إعدادات ملف كاباسيتور تتيح مزامنة الكود وبنائه مباشرة كتطبيق أندرويد متكامل وقابل للتشغيل الفوري.
+تم بناء التطبيق بالاعتماد على بنية برمجية حديثة تضمن الأداء العالي والاستجابة السريعة على منصات سطح المكتب والهواتف الذكية:
+
+- بيئة التشغيل الأساسية: ريأكت تسعة عشر مع أداة فايت لضمان سرعة التحميل الفوري وتحديث واجهة المستخدم بكفاءة عالية وبأقل استهلاك للموارد.
+- التنسيق والتصميم: صفحات تنسيق نقية لتصميم واجهة شبكة بينتو المتميزة بألوان متناسقة ومناسبة لظروف القراءة المختلفة.
+- تطبيق سطح المكتب: يعتمد على إطار عمل إليكترون لتجميع وتشغيل التطبيق كبرنامج أصيل مستقل متوافق مع نظام ويندوز.
+- تطبيق الهواتف الذكية: يستخدم منصة كاباسيتور لمزامنة كود الويب وتصديره مباشرة كتطبيق أندرويد متكامل.
 
 ## System Architecture & CLI Build
 
-The application features a modern, clean architecture ensuring high performance across desktop and mobile platforms:
-- **Core Runtime:** React 19 powered by Vite, guaranteeing instant startup and smooth rendering with zero lag.
-- **Styling & UI:** Vanilla CSS custom theme with a gorgeous Bento design, featuring soothing color palettes perfect for night-time reading.
-- **Desktop Wrapper (Electron):** Main process and preload logic located in the `electron/` directory to build fully native desktop apps.
+The application is built on a modern stack designed for high-performance execution across desktop and mobile environments:
+
+- **Core Runtime:** React 19 powered by Vite for fast hot reloading, minimized build size, and optimized UI updates.
+- **Styling & UI:** Written in vanilla CSS with a responsive Bento Grid design, offering a dark-mode friendly palette.
+- **Desktop Wrapper (Electron):** Main process and preload logic located in the `electron/` directory to compile native desktop binaries.
 - **Mobile Runtime (Capacitor):** Out-of-the-box configurations in `capacitor.config.ts` syncing code to package a full Android apk.
 
 ---
 
-### أوامر التطوير والتشغيل
+### أوامر التشغيل والبناء
 
-يمكنك تشغيل وبناء المشروع محلياً باستخدام الأوامر التالية في سطر الأوامر الخاص بك:
+يمكن تشغيل وبناء المشروع محليا من خلال تنفيذ الأوامر التالية في واجهة السطر البرمجي:
 
 - تشغيل خادم التطوير المحلي:
-  ```bash
-  npm run dev
-  ```
-  (يفتح التطبيق محلياً على المنفذ ثلاثين ثلاثين مع ميزة المزامنة السريعة والتحديث الفوري للتعديلات)
 
-- تشغيل نسخة سطح المكتب تجريبياً:
-  ```bash
-  npm run electron
-  ```
-  (يفتح التطبيق في نافذة مستقلة كبرنامج أصيل على جهاز الكمبيوتر)
+```bash
+npm run dev
+```
 
-- بناء نسخة إليكترون النهائية:
-  ```bash
-  npm run dist
-  ```
-  (يقوم ببناء ملفات الويب ثم تجميعها وتغليفها كبرنامج تثبيت جاهز لنظام التشغيل)
+  (لتشغيل نسخة الويب محليا مع دعم التحديث الفوري للتعديلات)
 
-- مزامنة وبناء تطبيق الأندرويد:
-  ```bash
-  npm run android:full-build
-  ```
-  (أمر متكامل يقوم ببناء ملفات الويب، ومزامنتها مع مجلد الأندرويد، ثم تشغيل أداة جرادل لإنتاج ملف تثبيت جاهز للتثبيت المباشر على هاتفك)
+- تشغيل نسخة سطح المكتب تجريبيا:
+
+```bash
+npm run electron
+```
+
+  (لتشغيل التطبيق داخل نافذة مستقلة كبرنامج لسطح المكتب)
+
+- بناء نسخة التوزيع لسطح المكتب:
+
+```bash
+npm run dist
+```
+
+  (لتجميع ملفات المشروع وحزمها في ملف تثبيت جاهز لنظام التشغيل)
+
+- مزامنة وبناء نسخة الأندرويد:
+
+```bash
+npm run android:full-build
+```
+
+  (أمر متكامل لبناء ملفات الويب، ومزامنتها مع مجلد الأندرويد، وتصدير حزمة التثبيت النهائية للهواتف الذكية)
 
 ### CLI Scripts
 
-You can run, test, and build the project locally using the following package scripts:
+You can run, test, and build the project locally using the following scripts:
 
-- Local Dev Server:
-  ```bash
-  npm run dev
-  ```
-  *(Spins up the web application on port 3030 with Hot Module Replacement)*
+- Local Development Server:
 
-- Electron Run:
-  ```bash
-  npm run electron
-  ```
-  *(Opens the app in a standalone native OS window)*
+```bash
+npm run dev
+```
 
-- Desktop Build:
-  ```bash
-  npm run dist
-  ```
-  *(Compiles web files and packages them into a distributable desktop installer)*
+  _(Spins up the web application with Hot Module Replacement)_
 
-- Android Full Sync & Build:
-  ```bash
-  npm run android:full-build
-  ```
-  *(A unified script that builds web code, syncs it with the Android native project, and invokes Gradle to assemble a debug APK!)*
+- Desktop Runtime Environment:
+
+```bash
+npm run electron
+```
+
+  _(Opens the application in a standalone native OS window)_
+
+- Desktop Distribution Build:
+
+```bash
+npm run dist
+```
+
+  _(Compiles web files and packages them into a distributable desktop installer)_
+
+- Android Sync & Build:
+
+```bash
+npm run android:full-build
+```
+
+  _(Builds web assets, synchronizes with the Android project, and compiles a debug APK)_
 
 ---
 
 > دعواتكم الصادقة لنا بظهر الغيب، ونسأل الله أن يجعل هذا العمل خالصاً لوجهه الكريم وأن ينفع به الحفاظ والمراجعين في مشارق الأرض ومغاربها.
 
-> 💌 We humbly request your prayers. May Allah accept this work sincerely for His sake, and make it a source of benefit for Quran memorizers worldwide.
+> We humbly request your prayers. May Allah accept this work sincerely for His sake, and make it a source of benefit for Quran memorizers worldwide.
+
