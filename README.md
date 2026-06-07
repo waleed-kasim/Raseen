@@ -1,8 +1,8 @@
-# رصين 🚀✨
+# رصين
 
 > "تعاهدوا هذا القرآن، فوالذي نفس محمد بيده لهو أشد تفلتاً من الإبل في عقلها"
 
-# Raseen 🚀✨
+# Raseen 
 
 > "Commit yourself to the Quran, for by Him in Whose Hand is my soul, it slips away faster than a camel from its binding."
 
